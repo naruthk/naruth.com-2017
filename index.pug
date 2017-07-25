@@ -1,0 +1,198 @@
+doctype html
+html(lang = en)
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content='Official website. Downlad my Resume. View my Projects. More information available.')
+        meta(name='author', content='Naruth Kongurai')
+        title Naruth Kongurai (Sam)
+
+        // Styles
+        link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+        link(href='css/theme.css', rel='stylesheet')
+        link(href='css/imagehover.min.css', rel='stylesheet')
+        link(href='vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+        link(href='css/component.css', rel='stylesheet')
+        
+        // Google Fonts
+        link(href='https://fonts.googleapis.com/css?family=Assistant:300,400,500,600,700', rel='stylesheet', type='text/css')
+
+    body
+        .large-wrapper
+            header.navbar-fixed-top
+                .margin-t-20
+                .container
+                    .row
+                        .col-sm-6.col-md-6.col-lg-6
+                            .logo-title 
+                                | Naruth Kongurai
+                        .col-sm-6.col-md-6.col-lg-6
+                            .margin-t-20.visible-xs
+                            .logo-slogan 
+                                | Front-End 
+                                br.visible-xs
+                                <span>Web</span> +
+                                <span>Mobile</span> 
+                                | Developer 
+                .margin-t-20
+            .margin-t-60
+            .container#about
+
+            // Begin About Section
+            .container#panel-about
+                .row   
+                    .col-sm-4.col-md-4.col-lg-4
+                        h3 About
+                        hr
+                    .col-sm-8.col-md-8.col-lg-8.text-center
+                        img.img-thumbnail(src="img/self-naruth-kongurai.jpg", alt="Naruth Kongurai")
+                        p 
+                            | I develop and work with web and mobile technology. I have more than two years
+                            | of internship experience and have a serious intent of using my strong knowledge and expertise to tackle
+                            | new challenges. I strive to improve myself and also have an affectionate interest for all things technology.
+                        p
+                            | I am a current senior at the University of Washington, Seattle campus, pursuing a degree in Communications.
+                        p
+                            | My resume is available 
+                            a(href="media/Kongurai_Naruth_grad2018.pdf" title="Resume link") here
+                            |. Please contact me directly at 
+                            a(href="mailto:naruthk@uw.edu" title="Email") naruthk@uw.edu
+            .margin-t-60
+            // End About Section
+
+            // Begin Companies Section
+            .container#panel-companies
+                .row   
+                    .col-sm-4.col-md-4.col-lg-4
+                        h3 Companies
+                        hr
+                mixin company-thumbnail-box(src, title, description, href)
+                    .col-sm-3.col-md-3.col-lg-3.text-center
+                        figure.w-100.imghvr-fade
+                            img(src = src, alt = title)
+                            figcaption
+                                p= title
+                                span.ih-delay-sm= description
+                            a(href=href)
+                .company-thumbnail-box
+                    .row.row.row-eq-height
+                        +company-thumbnail-box('img/company_ogilvyone.png', 'OgilvyOne Worldwide (Thailand)', 'Summer 2017', '#')
+                        +company-thumbnail-box('img/company_bitsee.png', 'Bitsee (USA)', 'January - March 2017', '#')
+                        +company-thumbnail-box('img/company_cpall.png', 'CP All (Thailand)', 'Summer 2016', '#')
+                        +company-thumbnail-box('img/company_tatankaarts.png', 'Tatanka Arts (USA)', '2012', '#')
+            .margin-t-60
+            // End Companies Section
+
+            // Begin Projects Section
+            .container#panel-projects
+                .row   
+                    .col-sm-4.col-md-4.col-lg-4
+                        h3 Projects
+                        hr
+                        button Toggle effect
+                        figure.stack.stack-spread
+                            img(src='img/3.png', alt='img03')
+                            img(src='img/3.png', alt='img03')
+                            img(src='img/3.png', alt='img03')
+                    mixin project-box(title, description, href)
+                        li
+                            a(href=href)
+                                p= title
+                            span= description
+                    .col-sm-8.col-md-8.col-lg-8
+                        .company-thumbnail-box
+                            ul
+                                +project-box(
+                                    'Milo Thailand Website & Content Update', 
+                                    'A project for Milo, a beverage company. I developed HTML templates and updated articles content weekly. Drupal CMS.', 
+                                    '#')
+                                +project-box(
+                                    'NIVEA Thailand Website - Experience Platform & Content Update', 
+                                    'Integrated new content (blogging articles, product launches) on the website. SiteCore CMS.', 
+                                    '#')
+                                +project-box(
+                                    'SHOWDC Shopping Mall Website', 
+                                    'Worked on the development of the shopping mall\'s Visit section by turning PSD templates to HTML.', 
+                                    '#')
+                                +project-box(
+                                    'Bitsee Discover App', 
+                                    'An intelligent Android app that lets you discover new content on the Internet based on a photo or video that you take.', 
+                                    '#')
+                                +project-box(
+                                    'DC Vote App for 7-Eleven', 
+                                    'A simple Android QR reader + rating app that is used in more than 8,000 7-Eleven convenience stores in Thailand!', 
+                                    '#')
+                        .margin-t-20
+                        p.text-right
+                            a(data-toggle='collapse', href='#moreProjects', aria-expanded='false', aria-controls='moreProjects') Show More
+                        .collapse#moreProjects
+                            ul
+                                +project-box(
+                                    'DC Vote App for 7-Eleven', 
+                                    'A simple Android QR reader + rating app that is used in more than 8,000 7-Eleven convenience stores in Thailand!', 
+                                    '#')
+                            .text-right
+                                p
+                                    | View more projects on 
+                                    a(href='http://www.github.com/naruthk', title='Github Profile') 
+                                        i.fa.fa-github(aria-hidden='true', target='_blank')
+            .margin-t-60
+
+            // Begin Development Technologies Section
+            .container#panel-technologies
+                .row   
+                    .col-sm-4.col-md-4.col-lg-4
+                        h3 Development Technologies
+                        hr
+                    mixin dev-tech-box(title, description)
+                        .dev-tech-box
+                            .row
+                                .col-sm-6.col-md-6.col-lg-6
+                                    p= title
+                                .col-sm-6.col-md-6.col-lg-6
+                                    span= description
+                                    hr.visible-xs
+                    .col-sm-8.col-md-8.col-lg-8
+                        +dev-tech-box('Java, Python', 'Software Development')
+                        +dev-tech-box('HTML, CSS, Javascript, MySQL', 'Web Development')
+                        +dev-tech-box('NodeJS, Pug (Jade), SCSS, Bootstrap, Foundation', 'Web Framework & Libraries')
+                        +dev-tech-box('Git, Command-Line-Interface', 'Tools')
+                        +dev-tech-box('Adobe XD, Adobe Photoshop', 'Design')
+                        +dev-tech-box('Sublime, Visual Stdudio Code, Android Studio, Eclipse', 'Software')
+            .margin-t-60
+            // End Development Technologies Section
+
+            // Begin Footer Section
+            .container
+                footer
+                    .row.text-center
+                        .col-sm-12.col-md-12.col-lg-12 
+                            p 
+                                | &copy; 2017 - Naruth Kongurai
+                                br
+                                | Developed using PUG, Javascript, SCSS, CSS3. MIT License.
+
+            //- .container
+            //-     button.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#myModal') Open Large Modal
+            //-     #myModal.modal.fade(role='dialog')
+            //-         .modal-dialog.modal-lg
+            //-             .modal-content
+            //-                 .modal-header
+            //-                     button.close(type='button', data-dismiss='modal') ×
+            //-                     h4.modal-title Modal Header
+            //-                 .modal-body
+            //-                     p This is a large modal.
+            //-                 .modal-footer
+            //-                     button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+        .scroll-top.page-scroll.hidden-sm.hidden-xs.hidden-lg.hidden-md
+            a.btn.btn-primary(href='#page-top')
+                i.fa.fa-chevron-up
+
+        script(src='vendor/bootstrap/js/bootstrap.min.js')
+        script(src='vendor/jquery/jquery.min.js')
+
+        // Stack Effects (SE) for Image
+        script(src='js/se_classie.js')
+        script(src='js/se_main.js')

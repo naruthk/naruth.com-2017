@@ -13,7 +13,6 @@ html(lang = en)
         link(href='css/theme.css', rel='stylesheet')
         link(href='css/imagehover.min.css', rel='stylesheet')
         link(href='vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
-        link(href='css/component.css', rel='stylesheet')
         
         // Google Fonts
         link(href='https://fonts.googleapis.com/css?family=Assistant:300,400,500,600,700', rel='stylesheet', type='text/css')
@@ -67,20 +66,20 @@ html(lang = en)
                     .col-sm-4.col-md-4.col-lg-4
                         h3 Companies
                         hr
-                mixin company-thumbnail-box(src, title, description, href)
+                mixin company-thumbnail-box(src, title, description, href, modalTitle)
                     .col-sm-3.col-md-3.col-lg-3.text-center
                         figure.w-100.imghvr-fade
                             img(src = src, alt = title)
                             figcaption
                                 p= title
                                 span.ih-delay-sm= description
-                            a(href=href)
+                            a(href=href, data-toggle='modal', data-target= modalTitle)
                 .company-thumbnail-box
                     .row.row.row-eq-height
-                        +company-thumbnail-box('img/company_ogilvyone.png', 'OgilvyOne Worldwide (Thailand)', 'Summer 2017', '#')
-                        +company-thumbnail-box('img/company_bitsee.png', 'Bitsee (USA)', 'January - March 2017', '#')
-                        +company-thumbnail-box('img/company_cpall.png', 'CP All (Thailand)', 'Summer 2016', '#')
-                        +company-thumbnail-box('img/company_tatankaarts.png', 'Tatanka Arts (USA)', '2012', '#')
+                        +company-thumbnail-box('img/company_ogilvyone.png', 'OgilvyOne Worldwide (Thailand)', 'Summer 2017', '#', 'modalOgilvy')
+                        +company-thumbnail-box('img/company_bitsee.png', 'Bitsee (USA)', 'January - March 2017', '#', 'modalBitsee')
+                        +company-thumbnail-box('img/company_cpall.png', 'CP All (Thailand)', 'Summer 2016', '#', 'modalCPAll')
+                        +company-thumbnail-box('img/company_tatankaarts.png', 'Tatanka Arts (USA)', '2012', '#', 'modalTatanka')
             .margin-t-60
             // End Companies Section
 
@@ -90,11 +89,6 @@ html(lang = en)
                     .col-sm-4.col-md-4.col-lg-4
                         h3 Projects
                         hr
-                        button Toggle effect
-                        figure.stack.stack-spread
-                            img(src='img/3.png', alt='img03')
-                            img(src='img/3.png', alt='img03')
-                            img(src='img/3.png', alt='img03')
                     mixin project-box(title, description, href)
                         li
                             a(href=href)
@@ -110,7 +104,7 @@ html(lang = en)
                                 +project-box(
                                     'NIVEA Thailand Website - Experience Platform & Content Update', 
                                     'Integrated new content (blogging articles, product launches) on the website. SiteCore CMS.', 
-                                    '#')
+                                     '#')
                                 +project-box(
                                     'SHOWDC Shopping Mall Website', 
                                     'Worked on the development of the shopping mall\'s Visit section by turning PSD templates to HTML.', 
@@ -124,19 +118,22 @@ html(lang = en)
                                     'A simple Android QR reader + rating app that is used in more than 8,000 7-Eleven convenience stores in Thailand!', 
                                     '#')
                         .margin-t-20
-                        p.text-right
+                        p.text-right#moreProjectsBtn
                             a(data-toggle='collapse', href='#moreProjects', aria-expanded='false', aria-controls='moreProjects') Show More
+                        p.text-right#lessProjectsBtn
+                            a(data-toggle='collapse', href='#moreProjects', aria-expanded='true', aria-controls='moreProjects') Show Less
                         .collapse#moreProjects
-                            ul
-                                +project-box(
-                                    'DC Vote App for 7-Eleven', 
-                                    'A simple Android QR reader + rating app that is used in more than 8,000 7-Eleven convenience stores in Thailand!', 
-                                    '#')
-                            .text-right
-                                p
-                                    | View more projects on 
-                                    a(href='http://www.github.com/naruthk', title='Github Profile') 
-                                        i.fa.fa-github(aria-hidden='true', target='_blank')
+                            .company-thumbnail-box
+                                ul
+                                    +project-box(
+                                        'Best Reads', 
+                                        'A simple Android QR reader + rating app that is used in more than 8,000 7-Eleven convenience stores in Thailand!', 
+                                        '#')
+                                .text-right
+                                    p
+                                        a(href='http://www.github.com/naruthk', title='Github Profile')
+                                            | View more projects on 
+                                            i.fa.fa-github(aria-hidden='true', target='_blank')
             .margin-t-60
 
             // Begin Development Technologies Section
@@ -173,6 +170,28 @@ html(lang = en)
                                 br
                                 | Developed using PUG, Javascript, SCSS, CSS3. MIT License.
 
+        .scroll-top.page-scroll.hidden-sm.hidden-xs.hidden-lg.hidden-md
+            a.btn.btn-primary(href='#page-top')
+                i.fa.fa-chevron-up
+
+        script(src='vendor/jquery/jquery.min.js')
+        script(src='vendor/bootstrap/js/bootstrap.min.js')
+        script(src='js/theme.js')
+
+        // Modals
+
+        #modalOgilvy.modal.fade(role='dialog')
+            .modal-dialog.modal-lg
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal') 
+                        h4.modal-title Modal Header
+                    .modal-body
+                        p This is a large modal.
+                    .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+                        
+
             //- .container
             //-     button.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#myModal') Open Large Modal
             //-     #myModal.modal.fade(role='dialog')
@@ -185,14 +204,3 @@ html(lang = en)
             //-                     p This is a large modal.
             //-                 .modal-footer
             //-                     button.btn.btn-default(type='button', data-dismiss='modal') Close
-
-        .scroll-top.page-scroll.hidden-sm.hidden-xs.hidden-lg.hidden-md
-            a.btn.btn-primary(href='#page-top')
-                i.fa.fa-chevron-up
-
-        script(src='vendor/bootstrap/js/bootstrap.min.js')
-        script(src='vendor/jquery/jquery.min.js')
-
-        // Stack Effects (SE) for Image
-        script(src='js/se_classie.js')
-        script(src='js/se_main.js')

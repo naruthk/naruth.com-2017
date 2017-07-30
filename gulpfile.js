@@ -10,7 +10,7 @@ var gulpPugBeautify = require('gulp-pug-beautify');
 
 
 
-// Copy required files in /node_modules into /vendor directory
+// Copy required files to their distributions folder
 gulp.task('copy', function() {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
         .pipe(gulp.dest('dist/vendor/bootstrap'))
@@ -27,7 +27,16 @@ gulp.task('copy', function() {
             '!node_modules/font-awesome/*.json'
         ])
         .pipe(gulp.dest('dist/vendor/font-awesome'))
+
+    // Images
+    gulp.src(['images/**/*'])
+        .pipe(gulp.dest('dist/img'))
+
+    // Javascript
+    gulp.src(['js/**/*'])
+        .pipe(gulp.dest('dist/js'))
 });
+
 
 // Turn SCSS files into CSS
 gulp.task('sass', function () {
@@ -50,7 +59,7 @@ gulp.task('pug', function () {
 });
 
 // Run everything
-gulp.task('default', ['sass', 'pug', 'copy']);
+gulp.task('default', ['sass', 'pug', 'copy', 'copyImages']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {

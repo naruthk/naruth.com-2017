@@ -17,13 +17,20 @@ body {
 }
 
 .large-wrapper {
-    margin: 30px;
+    margin: 30px 30px 0 30px;
     padding: 30px 0 30px 0;
+}
+
+.background-white {
     background-color: #fff;
+}
+.background-dark {
+    background-color: #333030;
 }
 
 header {
-    background-color: #fff;
+    background-color: #222323;
+    color: white;
     border-bottom: 1px solid #f2f2f2;
     .logo-title {
         font-size: $font-size + 20;
@@ -31,11 +38,11 @@ header {
     }
     .logo-slogan {
         font-size: $font-size + 10;
-        line-height: $font-size + 5;
+        line-height: $font-size + 8;
         margin-top: 10px;
         text-align: right;
         span {
-            color: red;
+            font-weight: bold;
         }
     }
     @media screen and (max-width: 720px) {
@@ -119,4 +126,36 @@ p {
 
 .hidden {
     display: none;
+}
+
+#panel-projects {
+    a, a:hover, a:visited {
+        text-decoration: none;
+    }
+    .card-link {
+        color: black;
+    }
+    .card {
+        text-align: center;
+    }
+    .card-text {
+        color: #333;
+    }
+}
+
+#panel-technologies {
+    padding-top: 30px;
+}
+
+footer {
+    padding-bottom: 30px;
+}
+
+.parallax {
+    background: gray;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    font-size: 18pt;
+    line-height: 300px;
 }

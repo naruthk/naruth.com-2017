@@ -18,7 +18,7 @@ html(lang = en)
         link(href='https://fonts.googleapis.com/css?family=Assistant:300,400,500,600,700', rel='stylesheet', type='text/css')
 
     body
-        .large-wrapper
+        .large-wrapper.background-white
             header.navbar-fixed-top
                 .margin-t-20
                 .container
@@ -45,7 +45,6 @@ html(lang = en)
                         h3 About
                         hr
                     .col-sm-8.col-md-8.col-lg-8.text-center
-                        img.img-thumbnail(src="img/self-naruth-kongurai.jpg", alt="Naruth Kongurai")
                         p 
                             | I develop and work with web and mobile technology. I have more than two years
                             | of internship experience and have a serious intent of using my strong knowledge and expertise to tackle
@@ -54,16 +53,16 @@ html(lang = en)
                             | I am a current senior at the University of Washington, Seattle campus, pursuing a degree in Communications.
                         p
                             | My resume is available 
-                            a(href="media/Kongurai_Naruth_grad2018.pdf" title="Resume link") here
+                            a(href="media/Kongurai_Naruth_grad2018.pdf", title="Resume link") here
                             |. Please contact me directly at 
-                            a(href="mailto:naruthk@uw.edu" title="Email") naruthk@uw.edu
+                            a(href="mailto:naruthk@uw.edu", title="Email") naruthk@uw.edu
             .margin-t-60
             // End About Section
 
             // Begin Companies Section
             .container#panel-companies
                 .row   
-                    .col-sm-4.col-md-4.col-lg-4
+                    .col-sm-12.col-md-12.col-lg-12
                         h3 Companies
                         hr
                 mixin company-thumbnail-box(src, title, description, href, modalTitle)
@@ -76,66 +75,81 @@ html(lang = en)
                             a(href=href, data-toggle='modal', data-target= modalTitle)
                 .company-thumbnail-box
                     .row.row.row-eq-height
-                        +company-thumbnail-box('img/company_ogilvyone.png', 'OgilvyOne Worldwide (Thailand)', 'Summer 2017', '#', 'modalOgilvy')
-                        +company-thumbnail-box('img/company_bitsee.png', 'Bitsee (USA)', 'January - March 2017', '#', 'modalBitsee')
-                        +company-thumbnail-box('img/company_cpall.png', 'CP All (Thailand)', 'Summer 2016', '#', 'modalCPAll')
-                        +company-thumbnail-box('img/company_tatankaarts.png', 'Tatanka Arts (USA)', '2012', '#', 'modalTatanka')
+                        +company-thumbnail-box('img/company_ogilvyone.png', 'OgilvyOne Worldwide (Thailand)', 'Summer 2017', '#', '#modalOgilvy')
+                        +company-thumbnail-box('img/company_bitsee.png', 'Bitsee (USA)', 'January - March 2017', '#', '#modalBitsee')
+                        +company-thumbnail-box('img/company_cpall.png', 'CP All (Thailand)', 'Summer 2016', '#', '#modalCPAll')
+                        +company-thumbnail-box('img/company_tatankaarts.png', 'Tatanka Arts (USA)', '2012', '#', '#modalTatanka')
             .margin-t-60
             // End Companies Section
 
             // Begin Projects Section
             .container#panel-projects
                 .row   
-                    .col-sm-4.col-md-4.col-lg-4
+                    .col-sm-12.col-md-12.col-lg-12
                         h3 Projects
                         hr
-                    mixin project-box(title, description, href)
-                        li
-                            a(href=href)
-                                p= title
-                            span= description
-                    .col-sm-8.col-md-8.col-lg-8
-                        .company-thumbnail-box
-                            ul
-                                +project-box(
-                                    'Milo Thailand Website & Content Update', 
-                                    'A project for Milo, a beverage company. I developed HTML templates and updated articles content weekly. Drupal CMS.', 
-                                    '#')
-                                +project-box(
-                                    'NIVEA Thailand Website - Experience Platform & Content Update', 
-                                    'Integrated new content (blogging articles, product launches) on the website. SiteCore CMS.', 
-                                     '#')
-                                +project-box(
-                                    'SHOWDC Shopping Mall Website', 
-                                    'Worked on the development of the shopping mall\'s Visit section by turning PSD templates to HTML.', 
-                                    '#')
-                                +project-box(
-                                    'Bitsee Discover App', 
-                                    'An intelligent Android app that lets you discover new content on the Internet based on a photo or video that you take.', 
-                                    '#')
+                mixin project-box(title, description, src)
+                    .project-box.col-xs-12.col-sm-6.col-md-3.col-lg-3
+                        a.card-link(href= '#')
+                            .card
+                                ul.list-group.list-group-flush
+                                    li.list-group-item
+                                        h4.card-title= title
+                                    li.list-group-item
+                                        img.card-img-top.img-responsive(src= src, alt= alt)
+                                        p.card-text= description
+
+                .row.row-eq-height
+                    +project-box(
+                        'Milo Thailand Website', 
+                        'For this beverage company, I developed HTML templates and updated articles content weekly on Drupal CMS.', 
+                        'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif')
+                    +project-box(
+                        'NIVEA Thailand Website', 
+                        'I integrated new content (blogging articles, product launches) on the website on SiteCore CMS.', 
+                        'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif')
+                    +project-box(
+                        'SHOWDC Thailand Website', 
+                        'I worked on the development of the shopping mall\'s Visit section by turning PSD templates to HTML.', 
+                        'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif')
+                    +project-box(
+                        'Bitsee Discover App', 
+                        'An Android app that lets you discover new content online based on a photo or video that you take.', 
+                        'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif')
+                .row
+                    .col-sm-12
+                        p.text-right
+                            a#moreProjectsBtn.link-blue(data-toggle='collapse', href='#moreProjects', aria-expanded='false', aria-controls='moreProjects') Show More
+                        .collapse#moreProjects
+                            //- hr
+                            .row.row.row-eq-height
                                 +project-box(
                                     'DC Vote App for 7-Eleven', 
-                                    'A simple Android QR reader + rating app that is used in more than 8,000 7-Eleven convenience stores in Thailand!', 
+                                    'An Android rating app used in more than 8,000 7-Eleven stores in Thailand.', 
                                     '#')
-                        .margin-t-20
-                        p.text-right#moreProjectsBtn
-                            a(data-toggle='collapse', href='#moreProjects', aria-expanded='false', aria-controls='moreProjects') Show More
-                        p.text-right#lessProjectsBtn
-                            a(data-toggle='collapse', href='#moreProjects', aria-expanded='true', aria-controls='moreProjects') Show Less
-                        .collapse#moreProjects
-                            .company-thumbnail-box
-                                ul
-                                    +project-box(
-                                        'Best Reads', 
-                                        'A simple Android QR reader + rating app that is used in more than 8,000 7-Eleven convenience stores in Thailand!', 
-                                        '#')
-                                .text-right
-                                    p
-                                        a(href='http://www.github.com/naruthk', title='Github Profile')
+                                +project-box(
+                                    'Samsung Email Template', 
+                                    'An email template (eDM) used for Samsung Thailand to send out to customers in Thailand.', 
+                                    '#')
+                                +project-box(
+                                    'Best Reads', 
+                                    'eeee', 
+                                    '#')
+                                +project-box(
+                                    'Speedreader', 
+                                    'eeee', 
+                                    '#')
+                            .row
+                                .col-sm-12
+                                    p.text-right
+                                        a.link-blue(href='http://www.github.com/naruthk', title='Github Profile', target='_blank')
                                             | View more projects on 
                                             i.fa.fa-github(aria-hidden='true', target='_blank')
-            .margin-t-60
 
+        .parallax
+            p Download Resume
+
+        .layout-wrapper
             // Begin Development Technologies Section
             .container#panel-technologies
                 .row   
@@ -166,9 +180,9 @@ html(lang = en)
                     .row.text-center
                         .col-sm-12.col-md-12.col-lg-12 
                             p 
-                                | &copy; 2017 - Naruth Kongurai
+                                | &copy; 2017 - Naruth Kongurai | MIT License
                                 br
-                                | Developed using PUG, Javascript, SCSS, CSS3. MIT License.
+                                | Developed using PUG, Javascript, SCSS, CSS3, and Bootstrap.
 
         .scroll-top.page-scroll.hidden-sm.hidden-xs.hidden-lg.hidden-md
             a.btn.btn-primary(href='#page-top')
@@ -185,22 +199,8 @@ html(lang = en)
                 .modal-content
                     .modal-header
                         button.close(type='button', data-dismiss='modal') 
-                        h4.modal-title Modal Header
+                        h4.modal-title OgilvyOne Worldwide
                     .modal-body
                         p This is a large modal.
                     .modal-footer
                         button.btn.btn-default(type='button', data-dismiss='modal') Close
-                        
-
-            //- .container
-            //-     button.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#myModal') Open Large Modal
-            //-     #myModal.modal.fade(role='dialog')
-            //-         .modal-dialog.modal-lg
-            //-             .modal-content
-            //-                 .modal-header
-            //-                     button.close(type='button', data-dismiss='modal') ×
-            //-                     h4.modal-title Modal Header
-            //-                 .modal-body
-            //-                     p This is a large modal.
-            //-                 .modal-footer
-            //-                     button.btn.btn-default(type='button', data-dismiss='modal') Close

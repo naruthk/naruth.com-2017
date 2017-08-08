@@ -107,33 +107,11 @@ footer {
     }
 }
 #panel-projects {
-    i {
-        margin-left: 5px;
-    }
-    a, a:hover, a:visited {
-        text-decoration: none;
-        color: black;
-    }
-    .card-link {
-        color: black;
-    }
-    .card {
-        text-align: center;
-    }
-    .card-text {
-        color: #333;
-    }
-    h4 {
-        margin-bottom: 20px;
-    }
-    i {
-        margin-right: 10px;
-    }
-    img {
-        height: 150px;
+    h3 {
+        color: #e74c3c
     }
     a {
-        height: auto;
+        color: black;
     }
 }
 
@@ -161,7 +139,18 @@ footer {
 }
 
 .project-box {
-    margin: 30px 30px 100px 30px;
+    // margin: 30px 30px 100px 30px;
+    small {
+        margin-left: 20px;
+    }
+    h1 {
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+    h1:hover {
+        color: #e74c3c !important;
+        cursor: pointer;
+    }
 }
 
 

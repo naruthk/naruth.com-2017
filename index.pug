@@ -56,6 +56,7 @@ html(lang = en)
                     .col-sm-4.col-md-4.col-lg-4
                         .pagination-left
                             p.title About
+                        img.img-rounded.img-centered(src='img/naruth.jpg')
                     .mega-about.col-sm-8.col-md-8.col-lg-8
                         p 
                             | I 
@@ -115,46 +116,55 @@ html(lang = en)
                                     .pagination-left
                                         p.title Projects
 
-                            mixin project-box(title, description)
-                                .project-box.col-xs-6.col-sm-6.col-md-3.col-lg-3
-                                    a(href, modalTitle)
-                                        .image-border#milo
-                                            .main-image
-                                            p.title= title
-
-                                //- .project-box.col-xs-12.col-sm-6.col-md-3.col-lg-3
-                                //-     a.card-link(href= '#')
-                                //-         img.card-img-top.img-fluid(src= src, alt= alt)
-                                //-         h3= title
-                                //-         p= description
+                            mixin project-box(title, description, src, category)
+                                .row
+                                    .project-box
+                                        .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                                            a(data-toggle='modal', data-target= modalTitle)
+                                                h1
+                                                    = title
+                                                    small= description
+                                        //- .image-border
+                                        //-     .main-image
+                                        //-         img.img-fluid(src=src, alt=alt)
+                                        //-     p.title= title
 
                             .container
-                                .row.row-eq-height
-                                    +project-box(
-                                        'Milo TH', 
-                                        'Thailand Milo\'s Futsal Campaign 2017', 
-                                        'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif')
-                                    +project-box(
-                                        'NIVEA TH', 
-                                        'Blogger Review articles & Product Launches pages', 
-                                        'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif')
-                                    +project-box(
-                                        'SHOW DC Mall', 
-                                        '"Visit Section" for Guests', 
-                                        'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif')
-                                .row.row.row-eq-height
-                                    +project-box(
-                                        'Bitsee Discover', 
-                                        'Android App for Discovering Online Content', 
-                                        'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif')
-                                    +project-box(
-                                        '7-Eleven DC Vote', 
-                                        'An Android rating app used in more than 8,000 7-Eleven stores in Thailand.', 
-                                        'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif')
-                                    +project-box(
+                                h3 Website
+                                .margin-t-20
+                                +project-box(
+                                    'Milo TH', 
+                                    'Thailand Milo\'s Futsal Campaign 2017', 
+                                    'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif',
+                                    'Website')
+                                +project-box(
+                                    'NIVEA TH', 
+                                    'Blogger Review articles & Product Launches pages', 
+                                    'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif',
+                                    'Website')
+                                +project-box(
+                                    'SHOW DC Mall', 
+                                    '"Visit Section" for Guests', 
+                                    'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif',
+                                    'Website')
+                                +project-box(
                                         'Samsung Email', 
                                         'An email template (eDM) used for Samsung Thailand to send out to customers in Thailand.', 
-                                        'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif')
+                                        'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif',
+                                        'Website')
+                                hr
+                                h3 Mobile
+                                .margin-t-20
+                                +project-box(
+                                    'Bitsee Discover', 
+                                    'Android App for Discovering Online Content', 
+                                    'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif',
+                                    'Mobile')
+                                +project-box(
+                                    '7-Eleven DC Vote', 
+                                    'An Android rating app used in more than 8,000 7-Eleven stores in Thailand.', 
+                                    'http://i583.photobucket.com/albums/ss278/campipr/coolcat.gif',
+                                    'Mobile')
 
         // Begin Promotion Banner
         .promo-banner 

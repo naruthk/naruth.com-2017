@@ -1,0 +1,271 @@
+// Naruth Kongurai
+// Theme for Website
+// Copyrighted
+// Version: 1.0.1
+// Build 2017
+
+
+// Layout Sections
+.large-wrapper {
+    margin: 0 40px 0 40px;
+}
+.small-wrapper, .large-wrapper {
+    padding: 30px;
+}
+.margin-t-20 { height: 20px; }
+.margin-t-60 { height: 60px; }
+
+header {
+    background-color: $color-main-typography;
+    padding: 20px 0 20px 0;
+    margin-bottom: 50px;
+
+    // Logo
+    .logo-title {
+        font-size: $font-size + 20;
+        line-height: $font-size + 10;
+        a, a:visited {
+            color: white;
+            text-decoration: none;
+        }
+    }
+    .logo-slogan {
+        font-size: $font-size + 10;
+        line-height: $font-size + 8;
+        margin-top: 10px;
+        text-align: right;
+        span {
+            font-weight: bold;
+        }
+    }
+    @media screen and (max-width: 720px) {
+        text-align: center;
+        .logo-slogan {
+            text-align: center;
+        }
+    }
+}
+
+footer {
+    padding-bottom: 30px;
+    color: white;
+    small {
+        font-size: 10pt;
+    }
+}
+
+.pagination-left {
+    border-bottom: 5px solid $background-color-panels;
+    width: 70%;
+    padding: 10px 20px 10px 40px;
+    p.title {
+        color: $color-main-typography;
+    }
+    margin-bottom: 30px;
+}
+
+
+// Panels
+#panel-about {
+    p { text-align: left; }
+    span {
+        margin: 30px 20px 0 0;
+        i {
+            margin-right: 10px;
+        }
+    }
+    .mega-about {
+        background-color: #f7f7f7;
+        border-radius: 30px;
+        padding: 30px;
+    }
+}
+
+#panel-about, #panel-companies, #panel-projects {
+    padding: 0 0 60px 0;
+}
+
+#panel-companies {
+    margin: 20px;
+    .thumbnail-boxes {
+        cursor: pointer;
+    }
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+    a {
+        padding: 20px 0 20px 0;
+    }
+    .rounded-box {
+        padding: 10px; 
+        border: 1px solid orange;
+        border-radius: 20px;
+        background-color: white;
+        width: 70%;
+        margin: auto;
+    }
+}
+#panel-projects {
+    i {
+        margin-left: 5px;
+    }
+    a, a:hover, a:visited {
+        text-decoration: none;
+        color: black;
+    }
+    .card-link {
+        color: black;
+    }
+    .card {
+        text-align: center;
+    }
+    .card-text {
+        color: #333;
+    }
+    h4 {
+        margin-bottom: 20px;
+    }
+    i {
+        margin-right: 10px;
+    }
+    img {
+        height: 150px;
+    }
+    a {
+        height: auto;
+    }
+}
+
+#panel-technologies {
+    padding-top: 30px;
+    color: white;
+}
+
+
+
+// Companies & Projects Boxes
+
+.dev-tech-box, .company-thumbnail-box  {
+    span {
+        font-size: smaller;
+        font-weight: 300;
+    }
+}
+
+.company-thumbnail-box {
+    img {
+        margin: auto;
+        padding-bottom: 10px;
+    }
+}
+
+.project-box {
+    margin: 30px 30px 100px 30px;
+}
+
+
+
+.promo-banner {
+    text-align: center;
+    background-color: #222323;
+    width: 100%;
+    padding: 30px 0 30px 0;
+    i {
+        font-size: 30pt;
+        margin: 30px 30px 30px 0;
+    }
+    a {
+        color: white;
+        margin: 30px;
+        &:hover {
+            color: $color-main-typography !important;
+        }
+        -webkit-transition: color 0.5s ease-out;
+        -moz-transition: color 0.5s ease-out;
+        -o-transition: color 0.5s ease-out;
+        -ms-transition: color 0.5s ease-out;
+        transition: color 0.5s ease-out;
+    }
+}
+
+.parallax {
+    text-align: center;
+    height: 250px;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+.image-border {
+	width: 300px;
+	height: 300px;
+	background-color: #eee;
+	position: relative;
+    z-index: 1;
+    
+    #milo, #milo.main-image {
+        background-image: url('https://unsplash.it/300?image=885') !important;
+    }
+	
+	&:after {
+		content: '';
+		position: absolute;
+		width: 290px;
+		height: 290px;
+		left: 5px;
+		top: 5px;
+		background-color: #fff;
+    }
+
+	.main-image {
+		position: absolute;
+		width: 290px;
+		height:290px;
+		left: 5px;
+		top: 5px;
+		background-size: 300px 300px;
+		background-position: center center;
+		z-index: 2;
+		transition: .2s ease-in-out;
+    }
+	
+	&:hover > .main-image {
+		transform: translate(-15px, -15px);
+		transition: .2s ease-in-out;
+	}
+	
+	&:hover > p.title:after {
+		transform: scale3d(1, 1, 1);
+		transition: .2s ease-in-out;
+	}
+	
+	p.title {
+		height: 60px;
+		padding: 0;
+		position: absolute;
+		bottom: -80px;
+		font-weight: 400;
+		line-height: 60px;
+		color: #2c3e50;
+		font-size: 1em;
+		margin-left: 150px;
+		transform: translateX(-50%);
+		
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background-color: #e74c3c;
+			bottom: 10px;
+			left: 0;
+			transform: scale3d(0, 1, 1);
+			transition: .2s ease-in-out;
+		}
+	}
+}

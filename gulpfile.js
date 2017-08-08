@@ -51,7 +51,7 @@ var pugFiles = ['*.pug', 'modules/**/*.pug']
 gulp.task('pug', function () {
   return gulp.src(pugFiles)
     .pipe(gulpPugBeautify({ omit_empty_lines: true }))
-    .pipe(pug({}))
+    .pipe(pug({ pretty: true }))
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({
       stream: true

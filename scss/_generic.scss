@@ -1,0 +1,117 @@
+
+
+// Variables
+$page-background-color: #fff;
+$font-color: #000;
+$font-family: 'Assistant', sans-serif;
+$font-size: 16pt;
+$link-color: #479dff;
+$color-main-typography: #e87722;
+$background-color-panels: #e87722;
+
+
+
+// Links & Navigation
+a {
+    color: $color-main-typography;
+    text-decoration: none;
+    &:visited {
+        color: $color-main-typography;
+    }
+    &:hover {
+        color: $link-color;
+        text-decoration: none;
+    }
+    -webkit-transition: color 0.5s ease-out;
+    -moz-transition: color 0.5s ease-out;
+    -o-transition: color 0.5s ease-out;
+    -ms-transition: color 0.5s ease-out;
+    transition: color 0.5s ease-out;
+}
+
+.link-white {
+    color: white !important;
+    &:hover {
+        color: white !important;
+    }
+}
+
+
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+h3 { font-weight: 600; }
+p { font-weight: 300; }
+p.title {
+    font-size: 20pt;
+    font-weight: 500;
+    color: $color-main-typography;
+}
+
+
+// General
+body {
+    background-color: $page-background-color;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: 400;
+    color: $font-color;
+}
+
+
+
+// Customizations - Colors, Backgrounds, Visiblity
+.background-white {
+    background-color: #fff;
+}
+.background-dark {
+    background-color: #282828;
+}
+.background-orange {
+    background-color: $color-main-typography;
+}
+header, footer {
+    color: white;
+}
+.hidden {
+    display: none;
+}
+.btn-bold {
+    margin: auto;
+    border-radius: 32px;
+    background-color: #26484c;
+    width: 300px;
+    height: 100px;
+    padding: 18px 0 14px;
+    text-align: center;
+    &:hover {
+        background-color: #000;
+        #arrow {
+            font-size: 20pt;
+        }
+    }
+    -webkit-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    -ms-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+    #arrow {
+        font-size: inherit;
+    }
+    // -webkit-transition: font-size 0.5s ease-out;
+    // -moz-transition: font-size 0.5s ease-out;
+    // -o-transition: font-size 0.5s ease-out;
+    // -ms-transition: font-size 0.5s ease-out;
+    // transition: font-size 0.5s ease-out;
+}
+hr {
+    display: block;
+    height: 1px;
+    border-bottom: 1px solid $color-main-typography;
+    hr.light {
+        border-bottom: 1px solid #282828;
+    }
+}

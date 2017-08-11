@@ -1,20 +1,15 @@
+/*
+------
+------
 
+BASE 
 
-// Variables
-$page-background-color: #fff;
-$font-color: #000;
-$font-family: 'Assistant', sans-serif;
-$font-size: 16pt;
-$link-color: #479dff;
-$color-main-typography: #e87722;
-$background-color-panels: #e87722;
+------
+------
+*/
 
-
-
-// Links & Navigation
+// Links
 a {
-    color: $color-main-typography;
-    text-decoration: none;
     &:visited {
         color: $color-main-typography;
     }
@@ -22,21 +17,20 @@ a {
         color: $link-color;
         text-decoration: none;
     }
+    color: $color-main-typography;
+    text-decoration: none;
     -webkit-transition: color 0.5s ease-out;
     -moz-transition: color 0.5s ease-out;
     -o-transition: color 0.5s ease-out;
     -ms-transition: color 0.5s ease-out;
     transition: color 0.5s ease-out;
 }
-
-.link-white {
+%link-white {
     color: white !important;
     &:hover {
         color: white !important;
     }
 }
-
-
 
 // Typography
 h1, h2, h3, h4, h5, h6 {
@@ -45,12 +39,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 h3 { font-weight: 600; }
 p { font-weight: 300; }
-p.title {
-    font-size: 20pt;
-    font-weight: 500;
-    color: $color-main-typography;
-}
-
 
 // General
 body {
@@ -60,8 +48,6 @@ body {
     font-weight: 400;
     color: $font-color;
 }
-
-
 
 // Customizations - Colors, Backgrounds, Visiblity
 .background-white {
@@ -80,9 +66,7 @@ header, footer {
     display: none;
 }
 
-#moreProjectsBtn {
-    width: 300px;
-}
+// Buttons
 .btn-bold {
     margin: auto;
     border-radius: 32px;
@@ -105,12 +89,11 @@ header, footer {
     #arrow {
         font-size: inherit;
     }
-    // -webkit-transition: font-size 0.5s ease-out;
-    // -moz-transition: font-size 0.5s ease-out;
-    // -o-transition: font-size 0.5s ease-out;
-    // -ms-transition: font-size 0.5s ease-out;
-    // transition: font-size 0.5s ease-out;
+    a, a:hover {
+        @extend %link-white;
+    }
 }
+
 hr {
     display: block;
     height: 1px;
@@ -119,3 +102,6 @@ hr {
         border-bottom: 1px solid #282828;
     }
 }
+
+.margin-t-20 { height: 20px; }
+.margin-t-60 { height: 60px; }

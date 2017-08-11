@@ -7,8 +7,8 @@ var sass = require('gulp-sass');
 var pug = require('gulp-pug');
 var browserSync = require('browser-sync').create();
 var gulpPugBeautify = require('gulp-pug-beautify');
-
-
+var cleanCSS = require('gulp-clean-css');
+ 
 
 // Copy required files to their distributions folder
 gulp.task('copy', function() {
@@ -45,7 +45,14 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('dist/css'));
 });
 
-var pugFiles = ['*.pug', 'modules/**/*.pug']
+var pugFiles = ['index.pug', 'modules/**/*.pug']
+
+// Minified CSS
+gulp.task('minify-css', () => {
+  return gulp.src('./dist/css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist/css'));
+});
 
 // // Build HTML using PUG template, then Prettify it
 gulp.task('pug', function () {
@@ -59,7 +66,7 @@ gulp.task('pug', function () {
 });
 
 // Run everything
-gulp.task('default', ['sass', 'pug', 'copy', 'copyImages']);
+gulp.task('default', ['sass', 'pug', 'copy', 'minify-css']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -71,7 +78,7 @@ gulp.task('browserSync', function() {
 });
 
 // Dev task with browserSync
-gulp.task('watch', ['browserSync', 'sass', 'pug'], function() {
+gulp.task('watch', ['browserSync', 'sass', 'pug', 'minify-css'], function() {
     gulp.watch('scss/**/*.scss', ['sass']);
     gulp.watch(pugFiles, ['pug']);
     // Reloads the browser whenever HTML, custom CSS, or JS files change

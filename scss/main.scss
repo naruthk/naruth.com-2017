@@ -1,11 +1,19 @@
-// General Attributes
-@import "_generic";
+// Naruth Kongurai
+// MIT License
+// 2017
 
-// Modals
-@import "_modals";
+
+
+@import "_variables";
+
+// General Attributes
+@import "_base";
 
 // Layouts
 @import "_layouts";
 
 // Theme
-@import "_orange-theme";
+@import "_theme";
+
+// Modals
+@import "_modals";

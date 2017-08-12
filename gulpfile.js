@@ -66,7 +66,7 @@ gulp.task('pug', function () {
 });
 
 // Run everything
-gulp.task('default', ['sass', 'pug', 'copy', 'minify-css']);
+gulp.task('default', ['sass', 'pug', 'minify-css', 'copy']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {

@@ -158,24 +158,25 @@ footer {
             line-height: 32px;
             // float: left;
             margin-right: 50px;
-            filter: grayscale(100%);
+            // filter: grayscale(100%);
             vertical-align: middle;
-            -webkit-transition: filter 0.5s ease-out;
-            -moz-transition: filter 0.5s ease-out;
-            -o-transition: filter 0.5s ease-out;
-            -ms-transition: filter 0.5s ease-out;
-            transition: filter 0.5s ease-out;    
+            // -webkit-transition: filter 0.5s ease-out;
+            // -moz-transition: filter 0.5s ease-out;
+            // -o-transition: filter 0.5s ease-out;
+            // -ms-transition: filter 0.5s ease-out;
+            // transition: filter 0.5s ease-out;    
+            cursor: pointer;
         }
         @media screen and (min-width: 540px) {
             img {
                 margin-left: 30px;
             }
         }
-        &:hover {
-            img {
-                filter: grayscale(0%);
-            }
-        }
+        // &:hover {
+        //     img {
+        //         filter: grayscale(0%);
+        //     }
+        // }
     }
 }
 

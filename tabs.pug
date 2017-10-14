@@ -1,0 +1,74 @@
+// Naruth Kongurai
+// Official personal website / projects / portfolio
+// 2017
+// v. 1.2
+// MIT License
+
+doctype html
+html(lang = en)
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content='Official website. Downlad my Resume. View my Projects. More information available.')
+        meta(name='author', content='Naruth Kongurai')
+        title Naruth Kongurai (Sam)
+
+        // Favicons
+        link(rel="apple-touch-icon", sizes="180x180", href="img/favicons/apple-touch-icon.png")
+        link(rel="icon", type="image/png", sizes="32x32", href="img/favicons/favicon-32x32.png")
+        link(rel="icon", type="image/png", sizes="16x16", href="img/favicons/favicon-16x16.png")
+        link(rel="manifest", href="img/favicons/manifest.json")
+        link(rel="mask-icon", href="img/favicons/safari-pinned-tab.svg", color="#5bbad5")
+        meta(name="theme-color", content="#ffffff")
+
+        // Styles
+        link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+        link(href='css/main.css', rel='stylesheet')
+        link(href='vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+        
+        // Google Fonts
+        link(href='https://fonts.googleapis.com/css?family=Assistant:300,400,500,600,700', rel='stylesheet', type='text/css')
+
+    body
+
+        // Begin Tabs Section
+        #about.container
+            .small-wrapper
+                p My tabs
+                .row   
+                    .col-sm-4.col-md-4.col-lg-4
+                        #about-title
+                            p Coding
+                    .col-sm-8.col-md-8.col-lg-8
+                        ul
+                            li 
+                                a(href="https://www.interviewcake.com/all-questions/java") Interview Cake
+                            li
+                                a(href="https://interviewing.io/") Interview.io
+                            li
+                                a(href="https://www.freecodecamp.org/") Free Coding Camp
+            .small-wrapper
+                .row   
+                    .col-sm-4.col-md-4.col-lg-4
+                        #about-title
+                            p Jobs
+                    .col-sm-8.col-md-8.col-lg-8
+                        ul
+                            li 
+                                a(href="https://washington-csm.symplicity.com/students/index.php?s=home") HuskyJobs
+                            li
+                                a(href="https://angel.co/jobs") Angel.co Jobs
+                            li
+                                a(href="https://www.indeed.com/") Indeed
+        // End Tabs Section
+
+        .scroll-to-top
+            a(href='#about')
+                i.fa.fa-chevron-up
+
+        include modals.pug
+
+        script(src='vendor/jquery/jquery.min.js')
+        script(src='vendor/bootstrap/js/bootstrap.min.js')
+        script(src='js/theme.js')

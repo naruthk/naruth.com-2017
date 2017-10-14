@@ -9,9 +9,10 @@ THEME
 */
 
 header {
-    background-color: $background-color-panels;
+    // background-color: $background-color-panels;
+    @extend .background-dark;
     padding: 20px 0 20px 0;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
 
     $logo-font-size: $font-size + 20;
     $logo-font-height: $font-size + 10;
@@ -77,7 +78,7 @@ footer {
         }
     }
     .mega-about {
-        background-color: #f7f7f7;
+        // background-color: #f7f7f7;
         border-radius: 10px;
         padding: 30px;
         margin: 30px 10px 10px 10px;
@@ -143,12 +144,14 @@ footer {
         small {
             margin-left: 20px;
         }
-        h2 {
-            margin-left: 30px;
+        p {
+            // margin-left: 30px;
             line-height: 32px;
             margin-bottom: 30px;
+            font-size: 14pt;
+            cursor: pointer;
         }
-        h2:hover {
+        p:hover {
             color: #e74c3c !important;
             cursor: pointer;
         }
@@ -158,13 +161,13 @@ footer {
             line-height: 32px;
             // float: left;
             margin-right: 50px;
-            // filter: grayscale(100%);
+            filter: grayscale(0%);
             vertical-align: middle;
-            // -webkit-transition: filter 0.5s ease-out;
-            // -moz-transition: filter 0.5s ease-out;
-            // -o-transition: filter 0.5s ease-out;
-            // -ms-transition: filter 0.5s ease-out;
-            // transition: filter 0.5s ease-out;    
+            -webkit-transition: filter 0.5s ease-out;
+            -moz-transition: filter 0.5s ease-out;
+            -o-transition: filter 0.5s ease-out;
+            -ms-transition: filter 0.5s ease-out;
+            transition: filter 0.5s ease-out;    
             cursor: pointer;
         }
         @media screen and (min-width: 540px) {
@@ -172,18 +175,19 @@ footer {
                 margin-left: 30px;
             }
         }
-        // &:hover {
-        //     img {
-        //         filter: grayscale(0%);
-        //     }
-        // }
+        &:hover {
+            img {
+                filter: grayscale(100%);
+            }
+        }
     }
 }
 
 #technologies {
     padding-top: 30px;
     color: white;
-    @extend .background-orange;
+    // @extend .background-orange;
+    @extend .background-dark;
     .dev-tech-box {
         span {
             font-size: smaller;
@@ -213,6 +217,15 @@ footer {
         -ms-transition: color 0.5s ease-out;
         transition: color 0.5s ease-out;
     }
+    @media screen and (max-width: 720px) {
+        i {
+            font-size: 25pt;
+            margin: 10px;
+        }
+        a {
+            margin: 10px;
+        }
+    }
 }
 
 .scroll-to-top {
@@ -222,7 +235,7 @@ footer {
     bottom: 50px;
     right: 50px;
     display: none;
-    background-color: #222323;
+    background-color: rgba(105, 105, 105, 0.267);
     border-bottom: 5px solid #f7f7f7;
     color: #ffffff;
     text-align: center;

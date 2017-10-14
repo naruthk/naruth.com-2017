@@ -40,26 +40,47 @@ html(lang = en)
                         .header-logo
                             a(href="http://www.naruthk.com") Naruth Kongurai
                     .col-sm-6.col-md-6.col-lg-6.hidden-xs
-                        .margin-t-20.visible-xs
                         .header-logo-slogan.text-right
-                            | Front-End 
+                            | Aspiring 
                             br.visible-xs
-                            <span>Web</span> +
-                            <span>Mobile</span> 
-                            | Developer 
-        // end of header
-        
-        // div to show on small screen only
-        #mobile-slogan
-            .container.visible-xs.text-center
-                .small-wrapper
-                    h2
-                        | Front-End 
-                        br.visible-xs
-                        <span>Web</span> +
-                        <span>Mobile</span> 
-                        | Developer 
+                            <span>Mobile</span> +
+                            <span>Web</span> 
+                            | Developer  
+                
+                // div to show on small screen only
+                #mobile-slogan
+                    .visible-xs.text-center
+                        .small-wrapper
+                            h2
+                                | Aspiring 
+                                br.visible-xs
+                                <span>Mobile</span> +
+                                <span>Web</span> 
+                                | Developer 
         // end of div
+        
+        // end of header
+
+
+        // Begin Promotion Banner
+        .feature-banner 
+            .container
+                .row
+                    .col-xs-12.col-md-12.col-lg-12
+                        a(href="media/Kongurai_Naruth_grad2018.pdf", title="Resume link")
+                            i(class="fa fa-file-text", aria-hidden="true")
+                        a(href="mailto:contact@naruthk.com", title="Email")
+                            i(class="fa fa-address-card", aria-hidden="true")
+                        a(href='http://www.github.com/naruthk', title='Github', target='_blank')
+                            i.fa.fa-github(aria-hidden='true', target='_blank')
+                        a(href='http://www.linkedin.com/in/naruthkongurai', title='Linkedin', target='_blank')
+                            i.fa.fa-linkedin(aria-hidden='true', target='_blank')
+                        br.visible-xs
+                        a(href='http://www.facebook.com/naruthkongurai', title='Facebook', target='_blank')
+                            i.fa.fa-facebook(aria-hidden='true', target='_blank')
+                        a(href='http://codepen.io/naruth1212/', title='Codepen', target='_blank')
+                            i.fa.fa-codepen(aria-hidden='true', target='_blank')
+        // End Promotion Banner
 
         // Begin About Section
         #about.container
@@ -74,38 +95,17 @@ html(lang = en)
                     .col-sm-8.col-md-8.col-lg-8
                         .mega-about
                             p 
-                                | I 
-                                b develop and work with web and mobile technology. 
-                                | I have accumulated more than two years of internship
-                                | experience in both Thailand and the United States, offering depth and skills of a person who is competent and will use
-                                | the knowledge and expertise to tackle new challenges and sets new heights.
-                                | I strive to improve myself and also have an affectionate interest for all things technology.
-                        .mega-about
+                                | My name is Naruth Kongurai. I am a senior currently studying at the University of Washington, majoring in Communications and minoring in Informatics. I am enrolling in Udacity's 
+                                a(href='https://www.udacity.com/course/android-developer-nanodegree-by-google--nd801') Android Developer Nanodegree program.
+                            hr
                             p
-                                | I am a 
-                                b current senior 
-                                | at the 
-                                b University of Washington (Seattle campus), 
-                                | pursuing a Bachelors' degree in 
-                                b Communications 
-                                | with a minor in 
-                                b Informatics
-                                | .
+                                | I develop and work with web and mobile technology. A list of my past work in various companies located in Thailand and the United States and my recent projects can all be found below.
+                            hr
                             p
-                                | I am currently finishing up my 
-                                a(href='https://www.udacity.com/course/android-developer-nanodegree-by-google--nd801') Udacity
-                                | 's 
-                                b Android Developer Nanodegree Program
-                                | . Please also have a look at my 
-                                a(href='https://profiles.udacity.com/p/3650118960', target='_blank') Udacity profile
-                                | , which is a great alternative to my Linkedin profile. 
-                        .mega-about
+                                b I am available for hire as a software engineer! (Full time, part time, internship position).
                             p
-                                | I am also an 
-                                b undergraduate researcher 
-                                | in the Community Data Science and Collective Collective research group. To learn more about that,
-                                | click 
-                                a(href='https://wiki.communitydata.cc/Main_Page', target='_blank') here.
+                                | Feel free to reach out to me by the email address: 
+                                a(href="mailto:contact@naruthk.com") contact@naruthk.com
         // End About Section
 
         // Begin Companies Section
@@ -122,78 +122,111 @@ html(lang = en)
                     +company-thumbnail-box('img/company_cpall.png', 'CP All (Thailand)', 'Summer 2016', '#', '#modalCPAll')
                     +company-thumbnail-box('img/company_tatankaarts.png', 'Tatanka Arts (USA)', '2012', '#', '#modalTatanka')
 
+        // Begin Development Technologies Section
+        #technologies
+            .container
+                .small-wrapper
+                    .row   
+                        .col-sm-4.col-md-4.col-lg-4
+                            h3 Development Technologies
+                            hr.visible-xs
+                        mixin dev-tech-box(title, description)
+                            .dev-tech-box
+                                .row
+                                    .col-sm-12.col-md-12.col-lg-12
+                                        span= description
+                                        p= title
+                                    .margin-t-20
+                                    //- .col-sm-6.col-md-6.col-lg-6
+                                    //-     span= description
+                                        //hr.visible-xs
+                        .col-sm-8.col-md-8.col-lg-8
+                            +dev-tech-box('Java, Python, Swift', 'Software Development')
+                            +dev-tech-box('HTML, CSS, Javascript, MySQL', 'Web Development')
+                            +dev-tech-box('NodeJS, Pug (Jade), SCSS, Bootstrap, Foundation', 'Web Framework & Libraries')
+                            +dev-tech-box('Git, Command-Line-Interface', 'Tools')
+                            +dev-tech-box('Adobe XD, Adobe Photoshop', 'Design')
+                            +dev-tech-box('Sublime, Visual Studio Code, Android Studio, Eclipse, Genymotion', 'Software')
+            .margin-t-60
+        // End Development Technologies Section
 
         // Begin Projects Section
         #projects
             .container
                 .small-wrapper.background-white
-                    .btn-bold#projects-button-wrapper
-                        a.link-white#projects-button-click(data-toggle='collapse', href='#moreProjects', aria-expanded='false', aria-controls='moreProjects') 
-                            | See My Projects
-                            #arrow
-                                i.fa.fa-chevron-down(aria-hidden='true')
+                    //- .btn-bold#projects-button-wrapper
+                    //-     a.link-white#projects-button-click(data-toggle='collapse', href='#moreProjects', aria-expanded='false', aria-controls='moreProjects') 
+                    //-         | See My Projects
+                    //-         #arrow
+                    //-             i.fa.fa-chevron-down(aria-hidden='true')
                     .row
                         .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                            .collapse#moreProjects
-                                .margin-t-20
+                            //- .collapse#moreProjects
+                            .margin-t-20
+                            .row
+                                .col-sm-4.col-md-4.col-lg-4
+                                    #projects-title
+                                        p.title Projects
+                            mixin project-box(title, description, src, modalTitle)
                                 .row
-                                    .col-sm-4.col-md-4.col-lg-4
-                                        #projects-title
-                                            p.title Projects
-                                mixin project-box(title, description, src, modalTitle)
-                                    .row
-                                        .project-box
-                                            a(data-toggle='modal', data-target= modalTitle)
-                                                .col-xs-3.col-sm-2.col-md-2.col-lg-2
-                                                    img(src=src)
-                                                .col-xs-9.col-sm-10.col-md-10.col-lg-10
-                                                    h2
-                                                        = title
-                                                        small= description
-                                .container
-                                    h3 Website
-                                    .margin-t-20
-                                    +project-box(
-                                        'Milo TH', 
-                                        'Thailand Milo\'s Futsal Campaign 2017', 
-                                        'img/logo_milo.png',
-                                        '#miloThailand')
-                                    +project-box(
-                                        'NIVEA TH', 
-                                        'Blogger Review articles & Product Launches pages', 
-                                        'img/logo_nivea.gif',
-                                        '#niveaThailand')
-                                    +project-box(
-                                        'SHOW DC Mall', 
-                                        '"Visit Section" for Guests', 
-                                        'img/logo_showdc.jpg',
-                                        '#showdc')
-                                    +project-box(
-                                        'Samsung Email', 
-                                        'An email template (eDM) used for Samsung Thailand to send out to customers in Thailand.', 
-                                        'img/logo_samsung.png',
-                                        '#samsungEmail')
-                                    hr
-                                    h3 Mobile
-                                    .margin-t-20
-                                    +project-box(
-                                        'Bitsee Discover', 
-                                        'Android App for Discovering Online Content', 
-                                        'img/logo_bitsee.png',
-                                        '#modalBitsee')
-                                    +project-box(
-                                        '7-Eleven DC Vote', 
-                                        'An Android rating app used in more than 8,000 7-Eleven stores in Thailand.', 
-                                        'img/logo_7-eleven.png',
-                                        '#7ElevenApp')
-                                    hr
-                                    h3 Software
-                                    .margin-t-20
-                                    +project-box(
-                                        'CLI Soccer App',
-                                        'Fetches scoreline updates, league standings, and players information for Liverpool F.C., an England soccer team. Built using Python',
-                                        'img/logo_cli-app.png',
-                                        '#cli-soccer')
+                                    .project-box
+                                        a(data-toggle='modal', data-target= modalTitle)
+                                            //- .col-xs-3.col-sm-2.col-md-2.col-lg-2
+                                            //-     img(src=src)
+                                            //- .col-xs-9.col-sm-10.col-md-10.col-lg-10
+                                            //-     p
+                                            //-         = description
+                                            .col-xs-12.col-sm-2.col-md-2.col-lg-2
+                                                img(src=src)
+                                                //- .margin-t-20
+                                            .col-xs-12.col-sm-10.col-md-10.col-lg-10
+                                                p
+                                                    = description
+                                                //- .margin-t-20
+                            .container
+                                h3 Website
+                                .margin-t-20
+                                +project-box(
+                                    'Milo TH', 
+                                    'Thailand Milo\'s Futsal Campaign 2017', 
+                                    'img/logo_milo.png',
+                                    '#miloThailand')
+                                +project-box(
+                                    'NIVEA TH', 
+                                    'Blogger Review articles & Product Launches pages', 
+                                    'img/logo_nivea.gif',
+                                    '#niveaThailand')
+                                +project-box(
+                                    'SHOW DC Mall', 
+                                    '"Visit Section" for Guests', 
+                                    'img/logo_showdc.jpg',
+                                    '#showdc')
+                                +project-box(
+                                    'Samsung Email', 
+                                    'An email template (eDM) used for Samsung Thailand to send out to customers in Thailand.', 
+                                    'img/logo_samsung.png',
+                                    '#samsungEmail')
+                                hr
+                                h3 Mobile
+                                .margin-t-20
+                                +project-box(
+                                    'Bitsee Discover', 
+                                    'Android App for Discovering Online Content', 
+                                    'img/logo_bitsee.png',
+                                    '#modalBitsee')
+                                +project-box(
+                                    '7-Eleven DC Vote', 
+                                    'An Android rating app used in more than 8,000 7-Eleven stores in Thailand.', 
+                                    'img/logo_7-eleven.png',
+                                    '#7ElevenApp')
+                                hr
+                                h3 Software
+                                .margin-t-20
+                                +project-box(
+                                    'PCLI Soccer App',
+                                    'Fetches scoreline updates, league standings, and players information for Liverpool F.C., an England soccer team. Built using Python',
+                                    'img/logo_cli-app.png',
+                                    '#cli-soccer')
         
         // Begin Promotion Banner
         .feature-banner 
@@ -206,7 +239,7 @@ html(lang = en)
                                 |Resume
                             a(href="mailto:contact@naruthk.com", title="Email")
                                 i.hidden-xs(class="fa fa-address-card", aria-hidden="true")
-                                |contact@naruthk.com
+                                |Email
                     .col-xs-12.col-md-6.col-lg-6
                         a(href='http://www.github.com/naruthk', title='Github', target='_blank')
                             i.fa.fa-github(aria-hidden='true', target='_blank')
@@ -217,36 +250,11 @@ html(lang = en)
                             i.fa.fa-facebook(aria-hidden='true', target='_blank')
                         a(href='http://codepen.io/naruth1212/', title='Codepen', target='_blank')
                             i.fa.fa-codepen(aria-hidden='true', target='_blank')
-        // End Promotion Banner
-
-        // Begin Development Technologies Section
-        #technologies
-            .container
-                .small-wrapper
-                    .row   
-                        .col-sm-4.col-md-4.col-lg-4
-                            h3 Development Technologies
-                            hr.visible-xs
-                        mixin dev-tech-box(title, description)
-                            .dev-tech-box
-                                .row
-                                    .col-sm-6.col-md-6.col-lg-6
-                                        p= title
-                                    .col-sm-6.col-md-6.col-lg-6
-                                        span= description
-                                        hr.visible-xs
-                        .col-sm-8.col-md-8.col-lg-8
-                            +dev-tech-box('Java, Python', 'Software Development')
-                            +dev-tech-box('HTML, CSS, Javascript, MySQL', 'Web Development')
-                            +dev-tech-box('NodeJS, Pug (Jade), SCSS, Bootstrap, Foundation', 'Web Framework & Libraries')
-                            +dev-tech-box('Git, Command-Line-Interface', 'Tools')
-                            +dev-tech-box('Adobe XD, Adobe Photoshop', 'Design')
-                            +dev-tech-box('Sublime, Visual Studio Code, Android Studio, Eclipse, Genymotion', 'Software')
-            .margin-t-60
-            // End Development Technologies Section
+            // End Promotion Banner
 
             // Begin Footer Section
             .container
+                .margin-t-20
                 footer
                     .row.text-center
                         .col-sm-12.col-md-12.col-lg-12 

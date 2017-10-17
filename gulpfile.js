@@ -45,7 +45,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('dist/css'));
 });
 
-var pugFiles = ['index.pug', 'modules/**/*.pug', 'tabs.pug']
+var pugFiles = ['index.pug', 'modules/**/*.pug', 'tabs.pug', '*.pug']
 
 // Minified CSS
 gulp.task('minify-css', () => {

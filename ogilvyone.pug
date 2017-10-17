@@ -1,0 +1,93 @@
+// Naruth Kongurai
+// Official personal website / projects / portfolio
+// 2017
+// v. 2.0
+// MIT License
+
+doctype html
+html(lang = en)
+    head
+        include header.pug
+        title OgilvyOne Worldwide
+    body
+
+        // begin of header
+        .container
+            .small-wrapper
+                .row
+                    .col-xs-12.col-md-6.col-lg-6.text-center
+                        a(href="http://www.naruthk.com")
+                            i.fa.fa-chevron-circle-left(aria-hidden="true") 
+                            |  Back to Naruth Kongurai's homepage
+                        .margin-t-20
+                    .col-xs-12.col-md-6.col-lg-6.text-center
+                        .mini-social-bar
+                            include social.pug
+        
+        // end of header
+
+        // Begin About Section
+        #about.container
+            .small-wrapper
+                .row
+                    .col-sm-4.col-md-4.col-lg-4
+                        p
+                            img.img-responsive(src='img/company_ogilvyone.png')
+                        p
+                            b OgilvyOne Worldwide
+                        p
+                            | July - September 2017
+                        p
+                            small HTML5, CSS3, Javascript, NodeJS, SCSS, PUG, TypeScript, Visual Studio Code
+                    .col-sm-8.col-md-8.col-lg-8
+                        .mega-about
+                            h2 My work at 
+                                b OgilvyOne Worldwide 
+                                br
+                                small (Front-End Web Developer Intern)
+                            p
+                                | Helped built a section of the website of one of Thailand's most famous shopping mall - 
+                                a(href='http://www.showdc.co.th/') Visit Tabs - SHOW DC Mall
+                            p
+                                | Published and maintained articles on existing database made by famous Thai bloggers - 
+                                a(href='http://www.nivia.co.th/experience') Nivea Thailand 
+                            p
+                                | Worked with Marketing Team to plan campaigns and develop a website for this drink company - 
+                                a(href='https://milo.co.th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%9A%E0%B9%88%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%82%E0%B9%88%E0%B8%87%E0%B8%82%E0%B8%B1%E0%B8%99-%E0%B9%84%E0%B8%A1%E0%B9%82%E0%B8%A5-%E0%B8%9F%E0%B8%B8%E0%B8%95%E0%B8%8B%E0%B8%AD%E0%B8%A5-2017') Milo Thailand 
+                            p
+                                | Updated Functional Specific Documents for functions created in this website - 
+                                i FWD Insurance Thailand 
+                            br
+                            h3 Internship Experience
+                            br
+                            p
+                                | Being able to intern and cultivate immense experience and knowledge from one of the world's most powerful and well-known advertisement agency is a truly incredible experience. From the first day until the very last day of my internship, I was able to gain experience developing web applications and pages for many clients, including Samsung and Nivea.
+                            p
+                                | Additionally, I was able to learn from top software engineers and architectures who taught me how to adopt industry principles and follow good practices when it comes to developing good software and websites. I learned how to make and update functional specific documents that were vital for the aspect of business and marketing. 
+                            p
+                                | All of these experiences were made possible thanks to the incredible and talented team at OgilvyOne that had helped me from the very first day I stepped into the beautiful office.
+                        
+        // End About Section
+        
+        // Begin Promotion Banner
+        .feature-banner 
+            .container
+                .row
+                    include social.pug
+            // End Promotion Banner
+
+            // Begin Footer Section
+            .container
+                .margin-t-20
+                footer
+                    .row.text-center
+                        .col-sm-12.col-md-12.col-lg-12 
+                            p 
+                                | &copy; 2017 - Naruth Kongurai
+        .scroll-to-top
+            a(href='#about')
+                i.fa.fa-chevron-up
+
+        script(src='vendor/jquery/jquery.min.js')
+        script(src='vendor/bootstrap/js/bootstrap.min.js')
+        script(src='js/theme.js')

@@ -1,0 +1,89 @@
+// Naruth Kongurai
+// Official personal website / projects / portfolio
+// 2017
+// v. 2.0
+// MIT License
+
+doctype html
+html(lang = en)
+    head
+        include header.pug
+        title Bitsee
+    body
+
+        // begin of header
+        .container
+            .small-wrapper
+                .row
+                    .col-xs-12.col-md-6.col-lg-6.text-center
+                        a(href="http://www.naruthk.com")
+                            i.fa.fa-chevron-circle-left(aria-hidden="true") 
+                            |  Back to Naruth Kongurai's homepage
+                        .margin-t-20
+                    .col-xs-12.col-md-6.col-lg-6.text-center
+                        .mini-social-bar
+                            include social.pug
+        
+        // end of header
+
+        // Begin About Section
+        #about.container
+            .small-wrapper
+                .row
+                    .col-sm-4.col-md-4.col-lg-4
+                        p
+                            img.img-responsive(src='img/company_bitsee.png')
+                        p
+                            b Bitsee
+                        p January - March 2017
+                        p
+                            small Java, Android Studio, Genymotion, Bitbucket, Git
+                    .col-sm-8.col-md-8.col-lg-8
+                        .mega-about
+                            h2 My work at 
+                                b Bitsee
+                                br
+                                small (Android Mobile Developer Intern)
+                            p
+                                | Developed a series of Tutorial pages for first-time users to help them learn how to navigate the app faster and easier
+                            p
+                                | Conducted app testing on virtual and physical devices
+                            p
+                                | Maintained and updated codes on GitHub and BitBucket (we had both!)
+                            br
+                            h3 Release
+                            br
+                            p Unfortunately, the app is still in private testing mode. So I cannot release any screenshot of the app at the moment.
+                            br
+                            h3 Company Information
+                            br
+                            p
+                                | Bitsee is an A.I. platform that automatically detects in-field signage in sports videos to help brands capture the media value of sports sponsorship across TV and social media.
+                            p
+                                | Learn more about the app at 
+                                a(href='http://www.bitsee.ai') http://www.bitsee.ai.            
+                        
+        // End About Section
+        
+        // Begin Promotion Banner
+        .feature-banner 
+            .container
+                .row
+                    include social.pug
+            // End Promotion Banner
+
+            // Begin Footer Section
+            .container
+                .margin-t-20
+                footer
+                    .row.text-center
+                        .col-sm-12.col-md-12.col-lg-12 
+                            p 
+                                | &copy; 2017 - Naruth Kongurai
+        .scroll-to-top
+            a(href='#about')
+                i.fa.fa-chevron-up
+
+        script(src='vendor/jquery/jquery.min.js')
+        script(src='vendor/bootstrap/js/bootstrap.min.js')
+        script(src='js/theme.js')

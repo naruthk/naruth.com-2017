@@ -11,11 +11,11 @@ THEME
 header {
     // background-color: $background-color-panels;
     @extend .background-dark;
-    padding: 20px 0 20px 0;
+    padding: 50px 0 20px 0;
     // margin-bottom: 50px;
 
     $logo-font-size: $font-size + 20;
-    $logo-font-height: $font-size + 10;
+    $logo-font-height: $font-size + 30;
 
     .header-logo {
         font-size: $logo-font-size;
@@ -26,7 +26,7 @@ header {
     }
     .header-logo-slogan {
         font-size: $logo-font-size - 10;
-        line-height:  $logo-font-height - 8;
+        line-height:  $logo-font-height - 20;
         margin-top: 10px;
         span {
             font-weight: bold;
@@ -36,6 +36,9 @@ header {
         text-align: center;
         .logo-slogan {
             text-align: center;
+        }
+        span {
+            font-weight: bold;
         }
     }
 }
@@ -62,6 +65,12 @@ footer {
 // Panels
 #about {
     margin-top: 30px;
+    h2 {
+        margin-bottom: 30px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
     #about-title {
         @extend %primary-header;
     }
@@ -194,6 +203,10 @@ footer {
         span {
             font-size: smaller;
             font-weight: 300;
+            color: #7e7e7e;
+        }
+        p {
+            color: #ffffff;
         }
     }
 }

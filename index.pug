@@ -86,25 +86,29 @@ html(lang = en)
         #about.container
             .small-wrapper
                 .row   
+                    .col-sm-12
+                .row
                     .col-sm-4.col-md-4.col-lg-4
-                        #about-title
-                            p About
                         #about-avatar
                             p
                                 img.img-rounded.img-responsive(src='img/naruth2.jpg')
                     .col-sm-8.col-md-8.col-lg-8
                         .mega-about
+                            h2 Hi, my name is 
+                                b Naruth Kongurai
+                                | .
                             p 
-                                | My name is Naruth Kongurai. I am a senior currently studying at the University of Washington, majoring in Communications and minoring in Informatics. I am enrolling in Udacity's 
-                                a(href='https://www.udacity.com/course/android-developer-nanodegree-by-google--nd801') Android Developer Nanodegree program.
-                            hr
+                                | I am a senior currently studying at the University of Washington, majoring in Communications and minoring in Informatics.
+                            p 
+                                | My interest for web and mobile development started more than three years ago at the time when I was a freshmen at the University of Washington. From that day forward, I began studying intensively on programming languages like Java and their data structures. I also started creating mobile apps on Android and developed websites for global companies like Nivea.
+                            h2 Let me hear from 
+                                b you
+                                | .
                             p
-                                | I develop and work with web and mobile technology. A list of my past work at various companies and recent projects can all be found below.
-                            hr
+                                b I am available for hire as a software engineer! 
+                                | That means full-time, part-time, or even an internship position are all accepted.
                             p
-                                b I am available for hire as a software engineer! (Full time, part time, internship position).
-                            p
-                                | Feel free to reach out to me by the email address: 
+                                | I cannot wait to get in touch with you. Feel free to reach out to me by my email address: 
                                 a(href="mailto:contact@naruthk.com") contact@naruthk.com
         // End About Section
 
@@ -137,9 +141,6 @@ html(lang = en)
                                         span= description
                                         p= title
                                     .margin-t-20
-                                    //- .col-sm-6.col-md-6.col-lg-6
-                                    //-     span= description
-                                        //hr.visible-xs
                         .col-sm-8.col-md-8.col-lg-8
                             +dev-tech-box('Java, Python, Swift', 'Software Development')
                             +dev-tech-box('HTML, CSS, Javascript, MySQL', 'Web Development')
@@ -163,10 +164,15 @@ html(lang = en)
                         .col-xs-12.col-sm-12.col-md-12.col-lg-12
                             //- .collapse#moreProjects
                             .margin-t-20
-                            .row
-                                .col-sm-4.col-md-4.col-lg-4
-                                    #projects-title
-                                        p.title Projects
+                            .container.text-center
+                                h2 Projects
+                                .margin-t-20
+                                p 
+                                    | Over the past 3-4 years, I have been doing professional and non-professional projects either with a team of developers or alone. There's more on 
+                                    i.fa.fa-github(aria-hidden='true') 
+                                    a(href='http://www.github.com/naruthk' title='Github', target='_blank')  GitHub 
+                                    |  if you're interested.
+                            .margin-t-20
                             mixin project-box(title, description, src, modalTitle)
                                 .row
                                     .project-box
@@ -260,7 +266,7 @@ html(lang = en)
                             p 
                                 | &copy; 2017 - Naruth Kongurai
                                 br
-                                small Developed using Pug (Jade), Javascript, SCSS, CSS3, Gulp, and Bootstrap | MIT License
+                                small I developed the site purely using SCSS and a tiny amount of Javascript. Development tools include NodeJS, Gulp, Bootstrap and Pug for easy HTML editing.
 
         .scroll-to-top
             a(href='#about')

@@ -45,9 +45,12 @@ header {
 
 footer {
     padding-bottom: 30px;
-    color: white;
+    color: white !important;
     small {
         font-size: 10pt;
+        padding: 0;
+        margin: 0;
+        line-height: 10pt !important;
     }
 }
 
@@ -147,6 +150,10 @@ footer {
     }
     #moreProjectsBtn {
         width: 300px;
+    }
+    i {
+        margin-left: 10px;
+        font-size: 20pt;
     }
 
     .project-box {

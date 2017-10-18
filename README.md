@@ -2,6 +2,8 @@
 
 This repository contains the source code for the necessary files that are used to edit, compile, and build my personal website, which is hosted on the University of Washington's cloud server.
 
+If you're interested in the free, downloadable version of my website's theme, check out my other repository: [https://github.com/naruthk/web-theme-portfolio](https://github.com/naruthk/web-theme-portfolio)
+
 ## Install
 
 - Have **npm** installed beforehand
@@ -25,7 +27,7 @@ The website that I developed used a variety of libraries and frameworks. This in
 
 I've recently decided to distribute a front-end HTML + CSS + Javascript version of my website for those who might be interested in it. I personally like the overall design and development of my own website. It feels really great to be able to come up with my own design (with inspiration from other people, of course) and to be able to share it with other developers out there.
 
-Here's the link: **working on it**
+Here's the link: [https://codepen.io/naruth1212/pen/wrRjKv](https://codepen.io/naruth1212/pen/wrRjKv)
 
 ## Copyright
 

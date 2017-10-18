@@ -118,7 +118,7 @@ html(lang = en)
                             +dev-tech-box('Sublime, Visual Studio Code, Android Studio, Eclipse, Genymotion', 'Software')
             .margin-t-60
         // End Development Technologies Section
-
+        
         // Begin Projects Section
         #projects
             .container
@@ -134,52 +134,53 @@ html(lang = en)
                                 br
                             .text-center
                                 .row
-                                    .col-xs-6.col-md-6.col-lg-6(style="padding-right:20px; border-right: 1px solid #ccc;")
-                                        a(href='http://www.github.com/naruthk' title='Github', target='_blank') 
-                                            | See more on 
-                                            i.fa.fa-github(aria-hidden='true')
-                                    .col-xs-6.col-md-6.col-lg-6
-                                        a(href='http://www.linkedin.com/in/naruthkongurai' title='LinkedIn', target='_blank') 
-                                            | View profile on 
-                                            i.fa.fa-linkedin(aria-hidden='true')
-                            .margin-t-20
-                            br
-                            mixin project-box(title, description, src, modalTitle)
-                                .row
-                                    .project-box
-                                        a(data-toggle='modal', data-target= modalTitle)
-                                            .col-xs-12.col-sm-2.col-md-2.col-lg-2
-                                                img(src=src)
-                                            .col-xs-12.col-sm-10.col-md-10.col-lg-10
-                                                p
-                                                    = description
+                                    .col-xs-12.col-md-6.col-lg-6
+                                        .col-xs-6.col-md-6.col-lg-6.div-line-divider
+                                            a(href='http://www.github.com/naruthk' title='Github', target='_blank') 
+                                                | See more on 
+                                                i.fa.fa-github(aria-hidden='true')
+                                        .col-xs-6.col-md-6.col-lg-6
+                                            a(href='http://www.linkedin.com/in/naruthkongurai' title='LinkedIn', target='_blank') 
+                                                | View profile on 
+                                                i.fa.fa-linkedin(aria-hidden='true')
+                                            .margin-t-20
+                                    .col-xs-12.col-md-6.col-lg-6
+                                        .margin-t-60.visible-xs
+                                        .toolbar.mb2.mt2
+                                            button.btn.fil-cat(href="", data-rel="all") All
+                                            button.btn.fil-cat(data-rel="web") Website
+                                            button.btn.fil-cat(data-rel="mobile") Mobile
+                                            button.btn.fil-cat(data-rel="design") Design
+                                            button.btn.fil-cat(data-rel="software") Software
+                                        div(style="clear:both;")
+
                     .row    
                         .col-xs-12.col-sm-12.col-md-12.col-lg-12             
-                            .toolbar.mb2.mt2
-                                button.btn.fil-cat(href="", data-rel="all") All
-                                button.btn.fil-cat(data-rel="web") Websites
-                                button.btn.fil-cat(data-rel="mobile") Mobiles
-                                button.btn.fil-cat(data-rel="design") Design
-                            div(style="clear:both;")
                             #portfolio
                                 .tile.scale-anm.web.all
-                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/2-mon_1092-300x234.jpg", alt="")
+                                    a(href='#', data-toggle='modal', data-target= '#project-nivea')
+                                        img(src="img/ui-web-nivea.png", alt="Nivea")
+                                .tile.scale-anm.software.all
+                                    a(href='#', data-toggle='modal', data-target= '#project-pcli')
+                                        img(src="img/ui-software-pcli.png", alt="PCLI")
                                 .tile.scale-anm.web.all
-                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg", alt="")
-                                .tile.scale-anm.web.all
-                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg", alt="")
+                                    a(href='#', data-toggle='modal', data-target= '#project-nivea')
+                                        img(src="img/ui-web-nivea2.png", alt="Nivea")
                                 .tile.scale-anm.design.all
-                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/codystretch-300x270.jpg", alt="")
-                                .tile.scale-anm.design.all
-                                    img(src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97190&w=350&h=190", alt="")
-                                .tile.scale-anm.mobile.all
-                                    img(src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290", alt="")
-                                .tile.scale-anm.mobile.all
-                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg", alt="")
-                                .tile.scale-anm.mobile.all
-                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg", alt="")
+                                    a(href='#', data-toggle='modal', data-target= '#project-samsung')
+                                        img.img-width-half(src="img/ui-web-samsung.png", alt="Samsung")
                                 .tile.scale-anm.web.all
-                                    img(src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290", alt="")
+                                    a(href='#', data-toggle='modal', data-target= '#project-showdc')
+                                        img(src="img/ui_showdc.png", alt="Show DC")
+                                .tile.scale-anm.mobile.all
+                                    a(href="bitsee.html", target="_blank")
+                                        img(src="img/ui-mobile-bitsee.png", alt="Bitsee")
+                                .tile.scale-anm.mobile.all
+                                    a(href='#', data-toggle='modal', data-target= '#project-dcvote')
+                                        img(src="img/ui-mobile-dcvote.png", alt="DC Vote")
+                                .tile.scale-anm.web.all
+                                    a(href='#', data-toggle='modal', data-target= '#project-milo')
+                                        img(src="img/ui-web-milo.png", alt="Milo")
                             div(style="clear:both;")
 
                         
@@ -250,7 +251,9 @@ html(lang = en)
             a(href='#about')
                 i.fa.fa-chevron-up
 
+
         include modals.pug
+
 
         script(src='vendor/jquery/jquery.min.js')
         script(src='vendor/bootstrap/js/bootstrap.min.js')

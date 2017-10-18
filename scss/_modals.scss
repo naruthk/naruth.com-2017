@@ -10,14 +10,20 @@ MODALS
 
 .modal-content-wrapper {
     background-color: white;
-    padding: 40px;
+    padding: 30px;
     .exit-btn {
         float: right;
     }
     img {
         margin-bottom: 30px;
     }
-    text-align: center;
-    font-size: 16pt;
-    font-weight: 400;
+    font-size: 14pt;
+    font-weight: 300;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    border-radius: 10px;
+
 }

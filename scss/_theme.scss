@@ -25,8 +25,8 @@ header {
         }
     }
     .header-logo-slogan {
-        font-size: $logo-font-size - 10;
-        line-height:  $logo-font-height - 20;
+        font-size: $logo-font-size - 15;
+        line-height:  $logo-font-height - 25;
         margin-top: 10px;
         span {
             font-weight: bold;
@@ -92,8 +92,8 @@ footer {
     .mega-about {
         // background-color: #f7f7f7;
         border-radius: 10px;
-        padding: 30px;
-        margin: 30px 10px 10px 10px;
+        padding: 10px;
+        margin: 20px 0 10px 0;
     }
 }
 
@@ -142,9 +142,9 @@ footer {
     #projects-title {
         @extend %primary-header;
     }
-    h3 {
-        color: #e74c3c
-    }
+    // h3 {
+    //     color: #e74c3c
+    // }
     a {
         color: black;
     }
@@ -220,9 +220,10 @@ footer {
 
 .feature-banner {
     text-align: center;
-    background-color: #222323;
+    // background-color: #222323;
+    @extend .background-dark;
     width: 100%;
-    padding: 30px 0 30px 0;
+    padding: 10px 0 10px 0;
     i {
         font-size: 30pt;
         margin: 30px 30px 30px 0;
@@ -280,3 +281,96 @@ footer {
         margin-right: 30px;
     }
 }
+
+
+// Originally created by Creotip's Codepen library.
+// I made some changes in order to fit it to my desired design.
+// Link: https://codepen.io/creotip/pen/dfjeF?page=19
+
+#portfolio {  
+    margin: 1rem 0;
+    -webkit-column-count: 3; 
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 1rem;
+    -moz-column-gap: 1rem;
+    column-gap: 1rem;
+    -webkit-column-width: 33.33333333333333%;
+    -moz-column-width: 33.33333333333333%;
+    column-width: 33.33333333333333%;
+
+    @media screen and (max-width: 700px) {
+        column-count: 1 !important;
+    }
+
+
+    .tile { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all 350ms ease;
+        transition: all 350ms ease;
+
+    }
+    .scale-anm {
+    transform: scale(1);
+    }
+
+    p{ 
+    padding:10px; 
+    border-bottom: 1px #ccc dotted; 
+    text-decoration: none; 
+    font-family: lato; 
+    text-transform:uppercase; 
+    font-size: 12px; 
+    color: #333; 
+    display:block; 
+    float:left;
+    }
+
+    p:hover { 
+    cursor:pointer; 
+    background: #333; 
+    color:#eee; }
+
+    .tile img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+
+    }
+
+    .btn {
+        font-family: Lato;
+        font-size: 1rem;
+        font-weight: normal;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        line-height: normal;
+        padding: .5rem 1rem;
+        margin: 0;
+        height: auto;
+        border: 1px solid;
+        vertical-align: middle;
+        -webkit-appearance: none;
+        color: #555;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .btn:hover {
+    text-decoration: none;
+    }
+
+    .btn:focus {
+    outline: none;
+    border-color: var(--darken-2);
+    box-shadow: 0 0 0 3px var(--darken-3);
+    }
+
+    ::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    }
+}
+  

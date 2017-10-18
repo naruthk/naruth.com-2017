@@ -16,7 +16,7 @@ html(lang = en)
             .container
                 .row
                     .col-sm-6.col-md-6.col-lg-6
-                        .header-logo
+                        .header-logo.text-center
                             a(href="http://www.naruthk.com") Naruth Kongurai
                     .col-sm-6.col-md-6.col-lg-6.hidden-xs
                         .header-logo-slogan.text-right
@@ -68,34 +68,27 @@ html(lang = en)
                             h2 Available for 
                                 b 
                                     a(href="mailto:contact@naruthk.com") hire
-                                | .
-                            p
-                                | I am available for hire as a software engineer! 
-                            p 
-                                | That means full-time, part-time, or even an internship position are all accepted.
+                                | . 
+                                br
+                                small I am available for hire as a software engineer! 
                             p
                                 | I cannot wait to get in touch with you. Feel free to reach out to me by my email address: 
                                 a(href="mailto:contact@naruthk.com") contact@naruthk.com
+                            h2 Download my 
+                                b 
+                                    a(href="media/Kongurai_Naruth_grad2018.pdf") resume
+                                | . 
         // End About Section
 
         // Begin Companies Section
         #companies
             .container
-                //- mixin company-thumbnail-box(src, title, description, href, modalTitle)
-                //-     a(data-toggle='modal', data-target= modalTitle)
-                //-         .col-xs-12.col-sm-3.col-md-3.col-lg-3.thumbnail-boxes
-                //-             p.text-center
-                //-                 img.img-responsive.center-block(src = src, alt = title)
                 mixin company-thumbnail-box(src, title, description, href)
                     a(href= href, target="_blank")
                         .col-xs-12.col-sm-3.col-md-3.col-lg-3.thumbnail-boxes
                             p.text-center
                                 img.img-responsive.center-block(src = src, alt = title)
                 .row
-                    //- +company-thumbnail-box('img/company_ogilvyone.png', 'OgilvyOne Worldwide (Thailand)', 'Summer 2017', '#', '#modalOgilvy')
-                    //- +company-thumbnail-box('img/company_bitsee.png', 'Bitsee (USA)', 'January - March 2017', '#', '#modalBitsee')
-                    //- +company-thumbnail-box('img/company_cpall.png', 'CP All (Thailand)', 'Summer 2016', '#', '#modalCPAll')
-                    //- +company-thumbnail-box('img/company_tatankaarts.png', 'Tatanka Arts (USA)', '2012', '#', '#modalTatanka')
                     +company-thumbnail-box('img/company_ogilvyone.png', 'OgilvyOne Worldwide (Thailand)', 'Summer 2017', 'ogilvyone.html')
                     +company-thumbnail-box('img/company_bitsee.png', 'Bitsee (USA)', 'January - March 2017', 'bitsee.html')
                     +company-thumbnail-box('img/company_cpall.png', 'CP All (Thailand)', 'Summer 2016', 'cpall.html')
@@ -133,13 +126,13 @@ html(lang = en)
                     .row
                         .col-xs-12.col-sm-12.col-md-12.col-lg-12
                             .margin-t-20
-                            .container.text-center
+                            .width-50.text-center
                                 h2 Projects
                                 .margin-t-20
                                 p 
                                     | Over the past 3-4 years, I have been doing professional and non-professional projects either with a team of developers or alone.
                                 br
-                            .container.text-center
+                            .text-center
                                 .row
                                     .col-xs-6.col-md-6.col-lg-6(style="padding-right:20px; border-right: 1px solid #ccc;")
                                         a(href='http://www.github.com/naruthk' title='Github', target='_blank') 
@@ -160,50 +153,80 @@ html(lang = en)
                                             .col-xs-12.col-sm-10.col-md-10.col-lg-10
                                                 p
                                                     = description
-                            .container
-                                h3 Website
-                                .margin-t-20
-                                +project-box(
-                                    'Milo TH', 
-                                    'Thailand Milo\'s Futsal Campaign 2017', 
-                                    'img/logo_milo.png',
-                                    '#miloThailand')
-                                +project-box(
-                                    'NIVEA TH', 
-                                    'Blogger Review articles & Product Launches pages', 
-                                    'img/logo_nivea.gif',
-                                    '#niveaThailand')
-                                +project-box(
-                                    'SHOW DC Mall', 
-                                    '"Visit Section" for Guests', 
-                                    'img/logo_showdc.jpg',
-                                    '#showdc')
-                                +project-box(
-                                    'Samsung Email', 
-                                    'An email template (eDM) used for Samsung Thailand to send out to customers in Thailand.', 
-                                    'img/logo_samsung.png',
-                                    '#samsungEmail')
-                                hr
-                                h3 Mobile
-                                .margin-t-20
-                                +project-box(
-                                    'Bitsee Discover', 
-                                    'Android App for Discovering Online Content', 
-                                    'img/logo_bitsee.png',
-                                    '#modalBitsee')
-                                +project-box(
-                                    '7-Eleven DC Vote', 
-                                    'An Android rating app used in more than 8,000 7-Eleven stores in Thailand.', 
-                                    'img/logo_7-eleven.png',
-                                    '#7ElevenApp')
-                                hr
-                                h3 Software
-                                .margin-t-20
-                                +project-box(
-                                    'PCLI Soccer App',
-                                    'Fetches scoreline updates, league standings, and players information for Liverpool F.C., an England soccer team. Built using Python',
-                                    'img/logo_cli-app.png',
-                                    '#cli-soccer')
+                    .row    
+                        .col-xs-12.col-sm-12.col-md-12.col-lg-12             
+                            .toolbar.mb2.mt2
+                                button.btn.fil-cat(href="", data-rel="all") All
+                                button.btn.fil-cat(data-rel="web") Websites
+                                button.btn.fil-cat(data-rel="mobile") Mobiles
+                                button.btn.fil-cat(data-rel="design") Design
+                            div(style="clear:both;")
+                            #portfolio
+                                .tile.scale-anm.web.all
+                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/2-mon_1092-300x234.jpg", alt="")
+                                .tile.scale-anm.web.all
+                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg", alt="")
+                                .tile.scale-anm.web.all
+                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg", alt="")
+                                .tile.scale-anm.design.all
+                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/codystretch-300x270.jpg", alt="")
+                                .tile.scale-anm.design.all
+                                    img(src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97190&w=350&h=190", alt="")
+                                .tile.scale-anm.mobile.all
+                                    img(src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290", alt="")
+                                .tile.scale-anm.mobile.all
+                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg", alt="")
+                                .tile.scale-anm.mobile.all
+                                    img(src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg", alt="")
+                                .tile.scale-anm.web.all
+                                    img(src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290", alt="")
+                            div(style="clear:both;")
+
+                        
+                            //- .container
+                            //-     h3 Website
+                            //-     .margin-t-20
+                            //-     +project-box(
+                            //-         'Milo TH', 
+                            //-         'Thailand Milo\'s Futsal Campaign 2017', 
+                            //-         'img/logo_milo.png',
+                            //-         '#miloThailand')
+                            //-     +project-box(
+                            //-         'NIVEA TH', 
+                            //-         'Blogger Review articles & Product Launches pages', 
+                            //-         'img/logo_nivea.gif',
+                            //-         '#niveaThailand')
+                            //-     +project-box(
+                            //-         'SHOW DC Mall', 
+                            //-         '"Visit Section" for Guests', 
+                            //-         'img/logo_showdc.jpg',
+                            //-         '#showdc')
+                            //-     +project-box(
+                            //-         'Samsung Email', 
+                            //-         'An email template (eDM) used for Samsung Thailand to send out to customers in Thailand.', 
+                            //-         'img/logo_samsung.png',
+                            //-         '#samsungEmail')
+                            //-     hr
+                            //-     h3 Mobile
+                            //-     .margin-t-20
+                            //-     +project-box(
+                            //-         'Bitsee Discover', 
+                            //-         'Android App for Discovering Online Content', 
+                            //-         'img/logo_bitsee.png',
+                            //-         '#modalBitsee')
+                            //-     +project-box(
+                            //-         '7-Eleven DC Vote', 
+                            //-         'An Android rating app used in more than 8,000 7-Eleven stores in Thailand.', 
+                            //-         'img/logo_7-eleven.png',
+                            //-         '#7ElevenApp')
+                            //-     hr
+                            //-     h3 Software
+                            //-     .margin-t-20
+                            //-     +project-box(
+                            //-         'PCLI Soccer App',
+                            //-         'Fetches scoreline updates, league standings, and players information for Liverpool F.C., an England soccer team. Built using Python',
+                            //-         'img/logo_cli-app.png',
+                            //-         '#cli-soccer')
         
         // Begin Promotion Banner
         .feature-banner 

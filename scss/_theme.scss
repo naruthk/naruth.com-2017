@@ -45,7 +45,6 @@ header {
 
 footer {
     @extend .background-dark;
-    padding-bottom: 30px;
     p {
         color: rgb(150, 150, 150);
         line-height: 20px;
@@ -53,6 +52,7 @@ footer {
     span {
         font-size: 10pt;
     }
+    padding-bottom: 80px;
 }
 
 %primary-header {

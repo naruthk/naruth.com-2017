@@ -60,25 +60,4 @@ html(lang = en)
                         
         // End About Section
         
-        // Begin Promotion Banner
-        .feature-banner 
-            .container
-                .row
-                    include social.pug
-            // End Promotion Banner
-
-            // Begin Footer Section
-            .container
-                .margin-t-20
-                footer
-                    .row.text-center
-                        .col-sm-12.col-md-12.col-lg-12 
-                            p 
-                                | &copy; 2017 - Naruth Kongurai
-        .scroll-to-top
-            a(href='#about')
-                i.fa.fa-chevron-up
-
-        script(src='vendor/jquery/jquery.min.js')
-        script(src='vendor/bootstrap/js/bootstrap.min.js')
-        script(src='js/theme.js')
+        include footer.pug

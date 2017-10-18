@@ -1,0 +1,30 @@
+// Begin Promotion Banner
+.feature-banner 
+    .container
+        .row
+            include social.pug
+// End Promotion Banner
+
+// Begin Footer Section
+footer
+    .container
+        .margin-t-20
+            .row.text-center
+                .col-sm-12.col-md-12.col-lg-12 
+                    p 
+                        | &copy; 2017 - Naruth Kongurai
+                    p
+                        span
+                            | Developed with SCSS, a fraction of Javascript, and big help from Gulp, Bootstrap and Pug.
+
+.scroll-to-top
+    a(href='#about')
+        i.fa.fa-chevron-up
+
+
+include modals.pug
+
+
+script(src='vendor/jquery/jquery.min.js')
+script(src='vendor/bootstrap/js/bootstrap.min.js')
+script(src='js/theme.js')

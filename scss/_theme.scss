@@ -44,13 +44,14 @@ header {
 }
 
 footer {
+    @extend .background-dark;
     padding-bottom: 30px;
-    color: white;
-    small {
+    p {
+        color: rgb(150, 150, 150);
+        line-height: 20px;
+    }
+    span {
         font-size: 10pt;
-        padding: 0;
-        margin: 0;
-        line-height: 10pt;
     }
 }
 
@@ -143,51 +144,6 @@ footer {
         margin-left: 10px;
         font-size: 20pt;
     }
-
-    // .project-box {
-    //     small {
-    //         margin-left: 20px;
-    //     }
-    //     p {
-    //         margin-left: 30px;
-    //         line-height: 25px;
-    //         margin-bottom: 30px;
-    //         margin-top: 10px;
-    //         font-size: 14pt;
-    //         cursor: pointer;
-    //         color: rgb(116, 116, 116);
-    //     }
-    //     p:hover {
-    //         color: #e74c3c !important;
-    //         cursor: pointer;
-    //     }
-    //     img {
-    //         width: 100px;
-    //         max-height: 32px !important;
-    //         line-height: 32px;
-    //         // float: left;
-    //         margin-right: 50px;
-    //         filter: grayscale(0%);
-    //         vertical-align: middle;
-    //         -webkit-transition: filter 0.5s ease-out;
-    //         -moz-transition: filter 0.5s ease-out;
-    //         -o-transition: filter 0.5s ease-out;
-    //         -ms-transition: filter 0.5s ease-out;
-    //         transition: filter 0.5s ease-out;    
-    //         cursor: pointer;
-
-    //         &:hover {
-    //             filter: grayscale(100%);
-    //         }
-
-    //     }
-
-    //     @media screen and (min-width: 540px) {
-    //         img {
-    //             margin-left: 30px;
-    //         }
-    //     }
-    // }
 }
 
 #technologies {
@@ -271,7 +227,6 @@ footer {
     }
 }
 
-
 // Originally created by Creotip's Codepen library.
 // I made some changes in order to fit it to my desired design.
 // Link: https://codepen.io/creotip/pen/dfjeF?page=19
@@ -353,7 +308,7 @@ footer {
         transform: scale(0);
         -webkit-transition: all 350ms ease;
         transition: all 350ms ease;
-
+        margin-bottom: 20px;
     }
     .scale-anm {
         transform: scale(1);
@@ -371,6 +326,8 @@ footer {
         -o-transition: filter 0.5s ease-out;
         -ms-transition: filter 0.5s ease-out;
         transition: filter 0.5s ease-out;    
+
+        border: 1px solid #d3d3d3;
         
         &:hover {
             filter: grayscale(100%);

@@ -1,0 +1,72 @@
+// Naruth Kongurai
+// Official personal website / projects / portfolio
+// 2017
+// v. 2.0
+// MIT License
+
+doctype html
+html(lang = en)
+    head
+        include ../../header.pug
+        link(href='http://www.naruthk.com/css/main.css', rel='stylesheet')
+        title Daily Notes - Distraction-Free iOS Application
+    body
+
+        // begin of header
+        .container
+            .small-wrapper
+                .row
+                    .col-xs-12.col-md-6.col-lg-6.text-center
+                        a(href="http://www.naruthk.com")
+                            i.fa.fa-chevron-circle-left(aria-hidden="true") 
+                            |  Back to Naruth Kongurai's homepage
+                        .margin-t-20
+                    .col-xs-12.col-md-6.col-lg-6.text-center
+                        .mini-social-bar
+                            include ../../social.pug
+        
+        // end of header
+
+        // Begin About Section
+        #about.container
+            .small-wrapper
+                .row
+                    .col-sm-4.col-md-4.col-lg-4
+                        p
+                            img(src="http://www.naruthk.com/img/apps/notes/Logo-180-180.png")
+                        p
+                            | October 2017
+                    .col-sm-8.col-md-8.col-lg-8
+                        .mega-about
+                            h2 Daily Notes - Distraction-Free
+                                br
+                                small iOS Application
+                            p
+                                a(href="https://itunes.apple.com/us/app/daily-notes-distraction-free/id1299564920?ls=1&mt=8")
+                                    img(src="http://www.naruthk.com/img/app-store-logo.png" style="width: 150px;")
+                            p
+                                small
+                                    |  Available for free. Works with iPhone and iPad. 
+                            br
+                            p
+                                | A lightweight mobile application that offers a distraction-free writing interface for note taking. The app displays text in plain text formatting. Back to the basic!
+                            p
+                                | To support my work, please provide a review for my app. I appreciate and response to every review that you guys provide.
+                        .row
+                            .col-sm-12.col-md-4.col-lg-4
+                                p
+                                    img.img-responsive.img-fluid(src="http://www.naruthk.com/img/apps/notes/Preview-iPhone-1.png")
+                            .col-sm-12.col-md-4.col-lg-4
+                                p
+                                    img.img-responsive(src="http://www.naruthk.com/img/apps/notes/Preview-iPhone-2.png")
+                            .col-sm-12.col-md-4.col-lg-4
+                                p
+                                    img.img-responsive(src="http://www.naruthk.com/img/apps/notes/Preview-iPhone-3.png")
+                        p
+                            small Massive thanks to 
+                                a(href="https://www.flaticon.com/packs/interface-icon-assets") Gregor Cresnar's modern icons
+                                | !
+                        
+        // End About Section
+        
+        include ../../footer.pug

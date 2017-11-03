@@ -165,17 +165,16 @@ footer {
 
 .feature-banner {
     text-align: center;
-    // background-color: #222323;
     @extend .background-dark;
     width: 100%;
     padding: 10px 0 10px 0;
     i {
-        font-size: 30pt;
-        margin: 30px 30px 30px 0;
+        font-size: 20pt;
+        margin: 20px 20px 20px 0;
     }
     a {
         color: white;
-        margin: 30px;
+        margin: 20px;
         &:hover {
             color: $color-main-typography !important;
         }
@@ -187,7 +186,7 @@ footer {
     }
     @media screen and (max-width: 720px) {
         i {
-            font-size: 25pt;
+            font-size: 20pt;
             margin: 10px;
         }
         a {

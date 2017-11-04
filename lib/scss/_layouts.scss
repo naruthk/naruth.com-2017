@@ -1,0 +1,30 @@
+/*
+------
+------
+
+LAYOUTS
+
+------
+------
+*/
+
+%padding {
+    padding: $general-padding-size;
+}
+
+// Layout Sections
+.large-wrapper {
+    margin: 0 40px 0 40px;
+    @extend %padding;
+}
+.small-wrapper {
+    @extend %padding;
+}
+
+.full-screen {
+    min-height: 100vh !important; // To set the height to full screen of the user's browser
+}
+
+.half-screen {
+    min-height: 50vh !important;
+}

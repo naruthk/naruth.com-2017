@@ -1,0 +1,417 @@
+/*
+------
+------
+
+THEME 
+
+------
+------
+*/
+
+header {
+    .header-logo {
+        font-size: $font-size + 10;
+        line-height: $font-size + 30;
+        a, a:visited {
+            color: #555;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        text-align: center;
+    }
+    .social-links {
+        padding: 10px 0 10px 0;
+        text-align: right;
+        i {
+            font-size: 16pt;
+            margin: 10px 16px 10px 0;
+        }
+        a {
+            color: rgb(78, 78, 78);
+            margin: 10px 16px 10px 0;
+            &:hover {
+                color: $color-main-typography !important;
+            }
+            -webkit-transition: color 0.5s ease-out;
+            -moz-transition: color 0.5s ease-out;
+            -o-transition: color 0.5s ease-out;
+            -ms-transition: color 0.5s ease-out;
+            transition: color 0.5s ease-out;
+        }
+        @media screen and (max-width: 750px) {
+            text-align: center;
+            i {
+                font-size: 16pt;
+            }
+            a, i { 
+                margin: 4px;
+            }
+        }
+        @media screen and (min-width: 900px) {
+            a:nth-last-child(2) {
+                border-right: 1px solid #d3d3d3;
+                padding-right: 10px;
+            }
+            a:last-child() {
+                margin-left: 10px;
+                i {
+                    padding-right: 10px;
+                }
+                ::after {
+                    content: "   View resume";
+                    white-space: pre;
+                    font-family: $font-family !important;
+                    font-size: 14pt;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+// Panels
+
+#about {
+    border-top: 1px solid #d8d8d8;
+    margin-top: 10px;
+    text-align: center !important;
+    color: #555 !important;
+    .profile-picture {
+        width: 150px;
+        margin-top: 10%;
+        margin-bottom: 30px;
+    }
+    .info {
+        padding: 0 30px 30px 30px;
+    }
+    .info, .updates {
+        @media screen and (min-width: 720px) {
+            width: 650px;
+            margin: auto;
+        }
+    }
+    .updates {
+        padding: 20px;
+        i {
+            font-size: 25pt !important;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        a:nth-child(1), a:nth-child(2) {
+            margin-right: 20px;
+        }
+        a, a:visited {
+            color: rgb(41, 41, 41);
+            font-weight: 600px;
+        }
+        a:hover {
+            color: $color-main-typography;
+        }
+        @media screen and (min-width: 400px) {
+            width: 450px !important;
+            margin: auto;
+        }
+        @media screen and (max-width: 400px) {
+            i {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+#job-status {
+    background-color: #f8f8f8;
+    padding: 50px;
+    .p-focus {
+        font-size: 18pt;
+    }
+    .row:nth-child(1) {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #dfdfdf;
+    }
+    .skills {
+        font-weight: 300;
+        font-size: 14pt;
+        color: rgb(141, 141, 141) !important;
+        b {
+            font-weight: 400;
+            margin-right: 20px;
+        }
+    }
+}
+
+#more-info {
+    margin-top: 60px;
+    p.focus {
+        line-height: 20px;
+        font-size: 17pt;
+        font-weight: 600;
+    }
+    p.focus {
+        margin-bottom: 20px;
+    }
+    p.content {
+        margin-bottom: 40px;
+    }
+    p.resume {
+        margin: 50px;
+        font-size: 20pt;
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+
+#companies {
+    background-color: #f8f8f8;
+    @media screen and (max-width: 800px) {
+        padding: 30px;
+    }
+    padding: 100px;
+    .thumbnail-boxes {
+        cursor: pointer;
+    }
+    img {
+        height: 100px;
+        max-width: 100%;
+        margin-bottom: 20px;
+        &:hover {
+            filter: opacity(0.5);
+        }
+        -webkit-transition: filter 0.5s ease-out;
+        -moz-transition: filter 0.5s ease-out;
+        -o-transition: filter 0.5s ease-out;
+        -ms-transition: filter 0.5s ease-out;
+        transition: filter 0.5s ease-out;  
+    }
+    a {
+        padding: 20px 0 20px 0;
+    }
+    .rounded-box {
+        padding: 10px; 
+        border: 1px solid orange;
+        border-radius: 20px;
+        background-color: white;
+        width: 70%;
+        margin: auto;
+    }
+    .company-thumbnail-box {
+        img {
+            margin: auto;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+#projects {
+    margin-top: 50px;
+    i {
+        margin-left: 10px;
+        font-size: 20pt;
+    }
+}
+
+#technologies {
+    padding-top: 30px;
+    color: white;
+    // @extend .background-orange;
+    @extend .background-dark;
+    .dev-tech-box {
+        span {
+            font-size: smaller;
+            font-weight: 300;
+            color: #7e7e7e;
+        }
+        p {
+            color: #ffffff;
+        }
+    }
+}
+
+.feature-banner {
+    text-align: center;
+    @extend .background-dark;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    i {
+        font-size: 20pt;
+        margin: 20px 20px 20px 0;
+    }
+    a {
+        color: white;
+        margin: 20px;
+        &:hover {
+            color: $color-main-typography !important;
+        }
+        -webkit-transition: color 0.5s ease-out;
+        -moz-transition: color 0.5s ease-out;
+        -o-transition: color 0.5s ease-out;
+        -ms-transition: color 0.5s ease-out;
+        transition: color 0.5s ease-out;
+    }
+    @media screen and (max-width: 720px) {
+        i {
+            font-size: 20pt;
+            margin: 10px;
+        }
+        a {
+            margin: 10px;
+        }
+    }
+}
+
+footer {
+    @extend .background-dark;
+    p {
+        color: rgb(150, 150, 150);
+        line-height: 20px;
+    }
+    span {
+        font-size: 10pt;
+    }
+    padding-bottom: 80px;
+}
+
+
+.scroll-to-top, .scroll-to-bottom {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+    background-color: rgba(105, 105, 105, 0.267);
+    border-bottom: 5px solid #f7f7f7;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14pt;
+    a {
+        @extend %link-white;
+    }
+    &:hover {
+        font-size: 16pt;
+    }
+    -webkit-transition: font-size 0.5s ease-out;
+    -moz-transition: font-size  0.5s ease-out;
+    -o-transition: font-size  0.5s ease-out;
+    -ms-transition: font-size  0.5s ease-out;
+    transition: font-size  0.5s ease-out;
+}
+
+.mini-social-bar {
+    i {
+        margin-right: 30px;
+    }
+}
+
+// Originally created by Creotip's Codepen library.
+// I made some changes in order to fit it to my desired design.
+// Link: https://codepen.io/creotip/pen/dfjeF?page=19
+
+.toolbar.mb2.mt2 {
+
+    button {
+        font-size: 1.5rem;
+        font-weight: normal;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        line-height: normal;
+        padding: .5rem 1rem;
+        margin: 0 5px 0 0;
+        height: auto;
+        border: 1px solid #d3d3d3;
+        vertical-align: middle;
+        -webkit-appearance: none;
+        color: #555;
+        background-color: white;
+        margin-bottom: 7px !important;
+
+        &:hover {
+            text-decoration: none;
+            background-color: rgb(58, 58, 58);
+            color: white;
+            border: 1px solid #d3d3d3;
+        }
+
+        -webkit-transition: background-color 0.8s ease-out;
+        -moz-transition: background-color 0.8s ease-out;
+        -o-transition: background-color 0.8s ease-out;
+        -ms-transition: background-color 0.8s ease-out;
+        transition: background-color 0.8s ease-out;
+        
+        &:focus {
+            outline: none;
+            border-color: var(--darken-2);
+            box-shadow: 0 0 0 3px var(--darken-3);
+        }
+
+        ::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+        }
+    
+    }
+    
+}
+
+#portfolio {  
+    margin: 3rem 0;
+    -webkit-column-count: 3; 
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 3rem;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
+    -webkit-column-width: 33.33333333333333%;
+    -moz-column-width: 33.33333333333333%;
+    column-width: 33.33333333333333%;
+
+    @media screen and (max-width: 700px) {
+        column-count: 2 !important;
+        -webkit-column-count: 2 !important; 
+        -moz-column-count: 2 !important;
+    }
+
+    @media screen and (max-width: 500px) {
+        column-count: 1 !important;
+        -webkit-column-count: 1 !important; 
+        -moz-column-count: 1 !important;
+    }
+
+
+    .tile { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all 350ms ease;
+        transition: all 350ms ease;
+        margin-bottom: 20px;
+    }
+    .scale-anm {
+        transform: scale(1);
+    }
+
+    .tile img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        filter: grayscale(0%);
+        vertical-align: middle;
+        -webkit-transition: filter 0.5s ease-out;
+        -moz-transition: filter 0.5s ease-out;
+        -o-transition: filter 0.5s ease-out;
+        -ms-transition: filter 0.5s ease-out;
+        transition: filter 0.5s ease-out;    
+
+        border: 1px solid #d3d3d3;
+        
+        &:hover {
+            filter: grayscale(100%);
+        }
+
+    }
+
+}
+  

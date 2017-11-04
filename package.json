@@ -12,6 +12,7 @@
     "browser-sync": "^2.18.13",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^3.7.0",
     "gulp-pug": "^3.3.0",
     "gulp-pug-beautify": "0.0.1",

@@ -39,9 +39,13 @@ html(lang = en)
                             i.fa.fa-github(aria-hidden='true', target='_blank') 
                             | Code
                         br.visible-xs
-                        a(href='https://medium.com/naruth-kongurai', title='Medium', target='_blank')
-                            i.fa.fa-medium(aria-hidden='true', target='_blank')
-                            | Blog
+                        a(href='https://twitter.com/naruthkongurai', title='Twitter', target='_blank')
+                            i.fa.fa-twitter(aria-hidden='true', target='_blank')
+                            | Tweets
+                    .margin-t-20
+                    p#current-activity
+                        span#status Currently
+                        | #100DaysOfCode challenge
         // End About Section
 
         // Begin Companies Section
@@ -54,7 +58,11 @@ html(lang = en)
                         p.p-focus I am looking for a job as either a <b>Front-End Web Developer</b>, an <b>Android</b> / <b>iOS Application Developer</b>, or a <b>Technical Writer</b>.
                     .col-sm-6.col-md-6.col-md-6.text-center
                         .margin-t-60
-                        img(src="img/open.png" alt="Great picture by Smashing Magazine!")
+                        .image-job-open
+                        p.resume
+                            a(href="http://www.naruthk.com/media/Kongurai_Naruth_grad2018.pdf", title="Resume")
+                                i.fa.fa-file-text(aria-hidden="true", target='_blank')  
+                                | View My Resume
                 .skills
                     p <b>Programming Languages:</b> Python, Java, Swift, HTML5, CSS3, Javascript, PHP
                     p <b>Libraries, Frameworks, Tools:</b> React, SCSS, Bootstrap, NodeJS, Vanilla JS, Typescript, Git
@@ -65,7 +73,7 @@ html(lang = en)
                 .row
                     .col-sm-6.col-md-6.col-md-6.text-center
                         .margin-t-20
-                        img(width="150px" src="img/analytics.png" alt="Great picture by Vectors Market!")
+                        .image-statistics
                         .margin-t-20
                         h2 Proud To Boast
                         p I am a senior attending the University of Washington and pursuing a Bachelor's Degree in Communication. Informatics is my minor!
@@ -89,82 +97,87 @@ html(lang = en)
                             .col-sm-12.col-md-6.col-lg-6
                                 p.focus Loves Open-Source
                                 p.content I'm a big fan of helping out the community, evidently through my contribution to Free Coding Camp community
-        
-        #companies
-            .container
-                mixin company-thumbnail-box(src, title, description, href)
-                    a(href= href, target="_blank")
-                        .col-xs-12.col-sm-3.col-md-3.col-lg-3.thumbnail-boxes
-                            p.text-center
-                                img.img-responsive.center-block(src = src, alt = title)
-                .row
-                    +company-thumbnail-box('img/company_ogilvyone.png', 'OgilvyOne Worldwide (Thailand)', 'Summer 2017', 'ogilvyone.html')
-                    +company-thumbnail-box('img/company_bitsee.png', 'Bitsee (USA)', 'January - March 2017', 'bitsee.html')
-                    +company-thumbnail-box('img/company_cpall.png', 'CP All (Thailand)', 'Summer 2016', 'cpall.html')
-                    +company-thumbnail-box('img/company_tatankaarts.png', 'Tatanka Arts (USA)', '2012', 'tatankaarts.html')
-
 
         // Begin Projects Section
         #projects
             .container
-                h2 Projects
-                .row
-                    .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        .text-center
-                            .row
-                                .col-xs-12.col-md-6.col-lg-6
-                                    .col-xs-6.col-md-6.col-lg-6.div-line-divider
-                                        a(href='http://www.github.com/naruthk' title='Github', target='_blank') 
-                                            | See more on 
-                                            i.fa.fa-github(aria-hidden='true')
-                                    .col-xs-6.col-md-6.col-lg-6
-                                        a(href='http://www.linkedin.com/in/naruthkongurai' title='LinkedIn', target='_blank') 
-                                            | View profile on 
-                                            i.fa.fa-linkedin(aria-hidden='true')
-                                        .margin-t-20
-                                .col-xs-12.col-md-6.col-lg-6
-                                    .margin-t-60.visible-xs
-                                    .toolbar.mb2.mt2
-                                        button.btn.fil-cat(href="", data-rel="all") All
-                                        button.btn.fil-cat(data-rel="web") Website
-                                        button.btn.fil-cat(data-rel="mobile") Mobile
-                                        button.btn.fil-cat(data-rel="design") Design
-                                        button.btn.fil-cat(data-rel="software") Software
-                                    div(style="clear:both;")
+                h2 Work
 
-                    .row    
-                        .col-xs-12.col-sm-12.col-md-12.col-lg-12             
-                            #portfolio
-                                .tile.scale-anm.web.all
-                                    a(href='#', data-toggle='modal', data-target= '#project-free-portfolio-theme')
-                                        img(src="img/project-web-free-template.png", alt="Free Portfolio Theme")
-                                .tile.scale-anm.web.all
-                                    a(href='#', data-toggle='modal', data-target= '#project-nivea')
-                                        img(src="img/ui-web-nivea.png", alt="Nivea")
-                                .tile.scale-anm.software.all
-                                    a(href='#', data-toggle='modal', data-target= '#project-pcli')
-                                        img(src="img/ui-software-pcli.png", alt="PCLI")
-                                .tile.scale-anm.mobile.all
-                                    a(href='app/notes/', target="_blank")
-                                        img(src="http://www.naruthk.com/img/apps/notes/Preview-iPhone-2.png", alt="Daily Notes App")
-                                .tile.scale-anm.web.all
-                                    a(href='#', data-toggle='modal', data-target= '#project-nivea')
-                                        img(src="img/ui-web-nivea2.png", alt="Nivea")
-                                .tile.scale-anm.design.all
-                                    a(href='#', data-toggle='modal', data-target= '#project-samsung')
-                                        img.img-width-half(src="img/ui-web-samsung.png", alt="Samsung")
-                                .tile.scale-anm.web.all
-                                    a(href='#', data-toggle='modal', data-target= '#project-showdc')
-                                        img(src="img/ui_showdc.png", alt="Show DC")
-                                .tile.scale-anm.mobile.all
-                                    a(href="bitsee.html", target="_blank")
-                                        img(src="img/ui-mobile-bitsee.png", alt="Bitsee")
-                                .tile.scale-anm.mobile.all
-                                    a(href='#', data-toggle='modal', data-target= '#project-dcvote')
-                                        img(src="img/ui-mobile-dcvote.png", alt="DC Vote")
-                                .tile.scale-anm.web.all
-                                    a(href='#', data-toggle='modal', data-target= '#project-milo')
-                                        img(src="img/ui-web-milo.png", alt="Milo")
-                            div(style="clear:both;")
+                .col-xs-12.col-sm-6.col-md-4.col-4
+                    a(href='#', data-toggle='modal', data-target= '#project-free-portfolio-theme')
+                        .tile
+                            img.img-responsive(src="img/project-web-free-template.png", alt="Free Portfolio Theme")
+                            p.title Portfolio Theme
+                                span.website Website
+                                span.featured Popular
+                            p Showcase your projects and personal information with this fantastic modern-looking HTML5 template
+                .col-xs-12.col-sm-6.col-md-4.col-4
+                    a(href='https://codepen.io/naruthk/full/LzMwWJ/', target="_blank")
+                        .tile
+                            img.img-responsive(src="img/project-js-color-picker.png", alt="Interactive Color Picker")
+                            p.title Interactive Color Picker
+                                span.website Website
+                                span.featured Popular
+                            p Beautiful color picker. A single tile represents a random color. Fun and elegant.
+                .col-xs-12.col-sm-6.col-md-4.col-4
+                    a(href='#', data-toggle='modal', data-target= '#project-nivea')
+                        .tile
+                            img(src="img/ui-nivea.png", alt="Nivea")
+                            p.title Nivea Blogging Section
+                                span.website Website
+                            p Developed a Blog section for bloggers to publish their articles on the Thailand's Nivea website
+                .col-xs-12.col-sm-6.col-md-4.col-4
+                    a(href='https://github.com/naruthk/pcli-liverpool-updates', target="_blank")
+                        .tile
+                            img(src="img/ui-python-soccer.png", alt="PCLI")
+                            p.title Liverpool Soccer Fixtures
+                                span Software
+                            p A Pythonic Command-Line-Interface application for Liverpool fans to retrieve the team's information
+                .col-xs-12.col-sm-6.col-md-4.col-4
+                    a(href='app/notes/', target="_blank")
+                        .tile
+                            p.text-center
+                                img(src="img/ui-daily-notes-app.png", alt="Daily Notes App")
+                            p.title Daily Notes App
+                                span App Store
+                            p Focus on just typing. The perfect note-taking companion app for your everyday need.
+                .col-xs-12.col-sm-6.col-md-4.col-4
+                    a(href='#', data-toggle='modal', data-target= '#project-samsung')
+                        .tile
+                            img(src="img/ui-samsung-email.png", alt="Samsung")
+                            p.title Email Template
+                                span Email
+                            p Built using Foundation. Designed on Photoshop. Email sent to millions of Samsung users in Thailand.
+                .col-xs-12.col-sm-6.col-md-4.col-4
+                    a(href='#', data-toggle='modal', data-target= '#project-milo')
+                        .tile
+                            img(src="img/ui-milo.png", alt="Milo")
+                            p.title Milo Homepage
+                                span.website Website
+                            p Impacting design. Visually attractive front page intending to direct user's attention to what's most important -- the products.
+                .col-xs-12.col-sm-6.col-md-4.col-4
+                    a(href='#', data-toggle='modal', data-target= '#project-showdc')
+                        .tile   
+                            img(src="img/ui-show-dc-mall.png", alt="Show DC")
+                            p.title SHOW DC Homepage
+                                span.website Website
+                            p Attractive landing page. Unique animations. Perfect fit to advertisement Thailand's newest shopping mall.
+                .col-xs-12.col-sm-6.col-md-4.col-4
+                    a(href='#', data-toggle='modal', data-target= '#project-dcvote')
+                        .tile
+                            img(src="img/ui-mobile-dcvote.png", alt="DC Vote")
+                            p.title DC Vote App
+                                span Mobile
+                            p A Survey Rating application. Built for the Android platform. Used by more than 9000+ 7-Eleven convenience stores.
+
+        #contact
+            .container
+                .row
+                    .col-sm-6.col-md-6.col-md-6.text-center
+                        .image-contact
+                    .col-sm-6.col-md-6.col-md-6
+                        h2 Contact
+                        p I'd love to hear from you. Let's have a conversation together.
+                        p <a href="mailto:contact@naruthk.com">contact@naruthk.com</a>
         
         include ../modules/footer.pug

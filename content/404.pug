@@ -1,0 +1,44 @@
+// Naruth Kongurai
+// Official personal website / projects / portfolio
+// 2017
+// v. 2.1
+// MIT License
+
+doctype html
+html(lang = en)
+    head
+        include ../modules/header.pug
+        title Oops, Page Not Found
+    body
+
+        // Begin of Header
+        header
+            .container
+                .row
+                    .col-sm-2.col-md-2.col-lg-2
+                        .header-logo
+                            a(href="http://www.naruthk.com") NK
+                    .col-sm-10.col-md-10.col-lg-10
+                        .social-links
+                            include ../modules/social.pug
+        // End of Header
+
+        #about
+            .full-screen                
+                .margin-t-60
+                .image-power
+                h2 <b>Wow</b>, this is embarassing.
+                .info
+                    p I've tried, but I just cannot find what you're searching for. My suggestion is to ask you to head back to my <a href="http://www.naruthk.com/" title="Go home">homepage</a>. Good luck with your search!
+
+                #contact
+                    .container
+                        .row
+                            .col-sm-6.col-md-6.col-md-6.text-center
+                                .image-contact
+                            .col-sm-6.col-md-6.col-md-6
+                                h2 Questions
+                                p I'd love to hear from you. Let's have a conversation together.
+                                p <a href="mailto:contact@naruthk.com">contact@naruthk.com</a>
+                        .margin-t-20
+        

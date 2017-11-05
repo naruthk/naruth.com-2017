@@ -1,0 +1,41 @@
+// Naruth Kongurai
+// Official personal website / projects / portfolio
+// 2017
+// v. 2.1
+// MIT License
+
+doctype html
+html(lang = en)
+    head
+        include ../modules/header.pug
+        title Daily Notes - Distraction-Free iOS Application
+    body
+
+        // Begin of Header
+        header
+            .container
+                .row
+                    .col-sm-2.col-md-2.col-lg-2
+                        .header-logo
+                            a(href="http://www.naruthk.com") NK
+                    .col-sm-10.col-md-10.col-lg-10
+                        .social-links
+                            include ../modules/social.pug
+        // End of Header
+
+        #about
+            img.img-responsive(src="img/ui-daily-notes-app-cropped.png" style="margin:auto")
+        
+            .margin-t-60
+            img(src="img/logo-daily-notes.png")
+            .margin-t-20
+            h2 <b>Daily Notes</b> iOS Application
+            .info
+                p A lightweight mobile application that offers a distraction-free writing interface for note taking. The app allows you to type and display text in plain format.
+
+            p 
+                a(href="https://itunes.apple.com/us/app/daily-notes-distraction-free/id1299564920?ls=1&mt=8")
+                    img(src="http://www.naruthk.com/img/app-store-logo.png" style="width: 150px;")
+            
+
+        include ../modules/footer.pug

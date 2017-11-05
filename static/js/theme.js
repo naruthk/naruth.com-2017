@@ -2,32 +2,32 @@
 
 $(document).ready(function () {
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.scroll-to-top').fadeIn();
-        } else {
-            $('.scroll-to-top').fadeOut();
-        }
-    });
+    activateScrollingButton();
+    changeActivityBackgroundWhenScroll();
 
-    $('.scroll-to-top').click(function () {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 600);
-        return false;
-    });
+    function activateScrollingButton() {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.scroll-to-top').fadeIn();
+            } else {
+                $('.scroll-to-top').fadeOut();
+            }
+        });
 
+        $('.scroll-to-top').click(function () {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+            return false;
+        });
+    }
 
-    var selectedClass = "";
-    $(".fil-cat").click(function() { 
-        selectedClass = $(this).attr("data-rel"); 
-        $("#portfolio").fadeTo(100, 0.1);
-        $("#portfolio div").not("."+selectedClass).fadeOut().removeClass('scale-anm');
-        setTimeout(function() {
-            $("."+selectedClass).fadeIn().addClass('scale-anm');
-            $("#portfolio").fadeTo(300, 1);
-        }, 300); 
-    });
-
+    function changeActivityBackgroundWhenScroll() {
+        $(document).scroll(function() {
+            var dHeight = $("#status").height();
+            var alpha = (($(this).scrollTop() / dHeight ) / 10);
+            $('#status').css('background', 'rgba(239,239,239,' +(alpha * 2)  + ')');
+          });
+    }
 
 });

@@ -15,7 +15,8 @@ MODALS
         float: right;
     }
     img {
-        margin-bottom: 30px;
+        padding-bottom: 30px;
+        margin: auto;
     }
     font-size: 14pt;
     font-weight: 300;
@@ -25,5 +26,14 @@ MODALS
     }
 
     border-radius: 10px;
+    margin: 50px;
+    text-align: center;
 
+    .icons {
+        font-size: 18pt;
+        i {
+            margin-right: 10px;
+        }
+        margin-bottom: 30px;
+    }
 }

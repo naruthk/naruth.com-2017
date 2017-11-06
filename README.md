@@ -1,5 +1,7 @@
 # Naruth Kongurai Website
 
+![](https://api.travis-ci.org/naruthk/web2017.svg?branch=master)
+
 This repository contains the source code for the necessary files that are used to edit, compile, and build my personal website, which is hosted on the University of Washington's cloud server.
 
 *Current website version*: 2.5

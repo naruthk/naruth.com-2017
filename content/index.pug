@@ -29,19 +29,19 @@ html(lang = en)
                 img.profile-picture(src='img/naruth2.png')
                 h2 Hi, my name is <b>Naruth Kongurai</b>.
                 .info
-                    p I love to design and develop front-end web applications. I also create mobile applications for Android and iOS, and a current undergraduate student at the University of Washington.
+                    p I love to design and develop front-end web applications and create mobile applications for Android and iOS. Currently I am an undergraduate student at the University of Washington.
                 .updates
-                    .row
-                        a(href="http://www.naruthk.com/media/Kongurai_Naruth_grad2018.pdf", title="Resume")
-                            i.fa.fa-file-text(aria-hidden="true", target='_blank') 
-                            | Resume
-                        a(href='http://www.github.com/naruthk', title='Github', target='_blank')
-                            i.fa.fa-github(aria-hidden='true', target='_blank') 
-                            | Code
-                        br.visible-xs
-                        a(href='https://twitter.com/naruthkongurai', title='Twitter', target='_blank')
-                            i.fa.fa-twitter(aria-hidden='true', target='_blank')
-                            | Tweets
+                    //- .row
+                    //-     a(href="http://www.naruthk.com/media/Kongurai_Naruth_grad2018.pdf", title="Resume")
+                    //-         i.fa.fa-file-text(aria-hidden="true", target='_blank') 
+                    //-         | Resume
+                    //-     a(href='http://www.github.com/naruthk', title='Github', target='_blank')
+                    //-         i.fa.fa-github(aria-hidden='true', target='_blank') 
+                    //-         | Code
+                    //-     br.visible-xs
+                    //-     a(href='https://twitter.com/naruthkongurai', title='Twitter', target='_blank')
+                    //-         i.fa.fa-twitter(aria-hidden='true', target='_blank')
+                    //-         | Tweets
                     .margin-t-20
                     p#current-activity
                         span#status Currently
@@ -54,8 +54,8 @@ html(lang = en)
                 .row
                     .col-sm-6.col-md-6.col-md-6.text-center
                         .margin-t-60
-                        h2 Job Availability
-                        p.p-focus I am looking for a job as either a <b>Front-End Web Developer</b>, an <b>Android</b> / <b>iOS Application Developer</b>, or a <b>Technical Writer</b>.
+                        h2 Available for Hire
+                        p.p-focus Previously interned as a <b>Front-End Web Developer</b> and also an <b>Android Application Developer</b>.
                     .col-sm-6.col-md-6.col-md-6.text-center
                         .margin-t-60
                         .image-job-open
@@ -76,11 +76,11 @@ html(lang = en)
                         .image-statistics
                         .margin-t-20
                         h2 Proud To Boast
-                        p I am a senior attending the University of Washington and pursuing a Bachelor's Degree in Communication. Informatics is my minor!
-                        p.resume
-                            a(href="http://www.naruthk.com/media/Kongurai_Naruth_grad2018.pdf", title="Resume")
-                                i.fa.fa-file-text(aria-hidden="true", target='_blank')  
-                                | View My Resume
+                        p I am a senior attending the University of Washington and pursuing a Bachelor's Degree in Communication while minoring in Informatics!
+                        //- p.resume
+                        //-     a(href="http://www.naruthk.com/media/Kongurai_Naruth_grad2018.pdf", title="Resume")
+                        //-         i.fa.fa-file-text(aria-hidden="true", target='_blank')  
+                        //-         | View My Resume
                         .margin-t-60
                     .col-sm-6.col-md-6.col-md-6
                         .row
@@ -119,6 +119,13 @@ html(lang = en)
                                 span.website Website
                                 span.featured Popular
                             p Beautiful color picker. A single tile represents a random color. Fun and elegant.
+                .col-xs-12.col-sm-6.col-md-4.col-4
+                    a(href='#', data-toggle='modal', data-target= '#project-extension-digital-clock')
+                        .tile   
+                            img(src="img/ui-chrome-extension-digital-clock.png", alt="Digital Clock Chrome Extension")
+                            p.title Digital Clock New Tab
+                                span.website Chrome
+                            p Bored of your current New Tab page? Try this beautiful digital clock. I guarantee you will fall in love with it.
                 .col-xs-12.col-sm-6.col-md-4.col-4
                     a(href='#', data-toggle='modal', data-target= '#project-nivea')
                         .tile

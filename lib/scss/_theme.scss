@@ -26,11 +26,11 @@ header {
         text-align: right;
         i {
             font-size: 16pt;
-            margin: 10px 16px 10px 0;
+            margin: 10px 20px 10px 0;
         }
         a {
             color: rgb(78, 78, 78);
-            margin: 10px 16px 10px 0;
+            margin: 10px 20px 10px 0;
             &:hover {
                 color: $color-main-typography !important;
             }
@@ -46,13 +46,13 @@ header {
                 font-size: 16pt;
             }
             a, i { 
-                margin: 4px;
+                margin: 10px;
             }
         }
         @media screen and (min-width: 900px) {
             a:nth-last-child(2) {
                 border-right: 1px solid #d3d3d3;
-                padding-right: 10px;
+                padding-right: 30px;
             }
             a:last-child() {
                 margin-left: 10px;
@@ -308,6 +308,16 @@ footer {
         }
         a {
             margin: 10px;
+        }
+    }
+    .social-links {
+        padding-bottom: 70px !important;
+        font-size: 18pt;
+        a, a:visited {
+            color: #d8d8d8;
+        }
+        a:hover {
+            color: #555 !important;
         }
     }
 }

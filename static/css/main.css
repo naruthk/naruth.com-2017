@@ -122,10 +122,10 @@ header {
     text-align: right; }
     header .social-links i {
       font-size: 16pt;
-      margin: 10px 16px 10px 0; }
+      margin: 10px 20px 10px 0; }
     header .social-links a {
       color: #4e4e4e;
-      margin: 10px 16px 10px 0;
+      margin: 10px 20px 10px 0;
       -webkit-transition: color 0.5s ease-out;
       -moz-transition: color 0.5s ease-out;
       -o-transition: color 0.5s ease-out;
@@ -139,11 +139,11 @@ header {
         header .social-links i {
           font-size: 16pt; }
         header .social-links a, header .social-links i {
-          margin: 4px; } }
+          margin: 10px; } }
     @media screen and (min-width: 900px) {
       header .social-links a:nth-last-child(2) {
         border-right: 1px solid #d3d3d3;
-        padding-right: 10px; }
+        padding-right: 30px; }
       header .social-links a:last-child {
         margin-left: 10px; }
         header .social-links a:last-child i {
@@ -340,6 +340,13 @@ footer {
       margin: 10px; }
     footer a {
       margin: 10px; } }
+  footer .social-links {
+    padding-bottom: 70px !important;
+    font-size: 18pt; }
+    footer .social-links a, footer .social-links a:visited {
+      color: #d8d8d8; }
+    footer .social-links a:hover {
+      color: #555 !important; }
 
 .scroll-to-top {
   width: 40px;
